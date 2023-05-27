@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/AssetPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/classStructure/ClassFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/fileStructure/FileLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/keyboard/Key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/keyboard/KeyManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/keyboard/KeyState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/mouse/MBtn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/mouse/MBtnState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/mouse/MouseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/main/ArkitoApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/GameObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/Transform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/prefabs/Prefabs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/DefaultScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Scene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/assetLoaders/AssetLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/assetLoaders/LoadingScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/GuiLayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/GuiText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/ClickListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiImageButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiKeyListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiTextField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiTextObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRendering/Animation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRendering/Camera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/postRenderGraphics/GraphicsDraw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/postRenderGraphics/Line2D.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QMAIs7z0w9YhejpPSQIDhX1DFM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Users/socce/Desktop/Arkito/src/main/java/l0raxeo/arki/engine",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\engine" />
+      <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\renderer" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Arkito" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="l0raxeo.arki.engine.main.ArkitoApp" />
+      <module name="Arkito.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="" />
+      <created>1685153018164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685153018164</updated>
+      <workItem from="1685153019354" duration="7937000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
