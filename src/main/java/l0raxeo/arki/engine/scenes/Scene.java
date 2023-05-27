@@ -7,6 +7,7 @@ import l0raxeo.arki.renderer.AppWindow;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public abstract class Scene
@@ -71,6 +72,27 @@ public abstract class Scene
 
     public abstract void update(double dt);
     public abstract void render(Graphics g);
+
+    protected void updateSceneGameObjects(double dt)
+    {
+        Iterator<GameObject> iterator = getGameObjects().iterator();
+        while (iterator.hasNext())
+        {
+            GameObject gameObject = iterator.next();
+            if (gameObject.isDead())
+            {
+                iterator.remove();
+                continue;
+            }
+
+            gameObject.update(dt);
+        }
+    }
+
+    protected void renderSceneGameObjects(Graphics g)
+    {
+        getGameObjects().forEach(gameObject -> gameObject.render(g));
+    }
 
     public void loadResources() {}
 

@@ -5,7 +5,6 @@ import l0raxeo.arki.engine.input.keyboard.KeyManager;
 import l0raxeo.arki.engine.input.mouse.MouseManager;
 import l0raxeo.arki.engine.scenes.DefaultScene;
 import l0raxeo.arki.engine.scenes.Scene;
-import l0raxeo.arki.engine.scenes.Test;
 import l0raxeo.arki.engine.scenes.assetLoaders.LoadingScreen;
 import l0raxeo.arki.engine.ui.GuiLayer;
 import l0raxeo.arki.renderer.postRenderGraphics.GraphicsDraw;
