@@ -129,10 +129,4 @@ public class GameObject
             this.uid = ID_COUNTER++;
     }
 
-    public static void checkAndUpdateIdCounter(int count)
-    {
-        if (count > ID_COUNTER)
-            ID_COUNTER = count;
-    }
-
 }

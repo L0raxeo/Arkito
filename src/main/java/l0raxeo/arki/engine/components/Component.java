@@ -19,9 +19,9 @@ public abstract class Component
 
     }
 
-    public void update(double dt){}
+    public abstract void update(double dt);
 
-    public void render(Graphics g) {}
+    public abstract void render(Graphics g);
 
     public void generateId()
     {
@@ -37,14 +37,6 @@ public abstract class Component
     public void onDestroy()
     {
 
-    }
-
-    public void handlePacketArgs(String args) {}
-
-    public static void checkAndUpdateIdCounter(int count)
-    {
-        if (count > ID_COUNTER)
-            ID_COUNTER = count;
     }
 
 }

@@ -18,7 +18,7 @@ public class GuiLayer
 
     private GuiLayer() {}
 
-    public void onMouseMove(Vector2i mousePos, Vector2i mouseMoved, Vector2i mouseDragged)
+    public void onMouseMove(Vector2i mousePos)
     {
         for (GuiComponent c : getGuiComponents())
         {
@@ -27,7 +27,7 @@ public class GuiLayer
         }
     }
 
-    public void onMouseRelease(int xMouse, int yMouse)
+    public void onMouseRelease()
     {
         try
         {

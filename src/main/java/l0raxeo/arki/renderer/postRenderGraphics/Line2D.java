@@ -6,8 +6,8 @@ import org.joml.Vector3f;
 public class Line2D
 {
 
-    private Vector2i from;
-    private Vector2i to;
+    private final Vector2i from;
+    private final Vector2i to;
     private Vector3f color;
 
     private int lifetime;
