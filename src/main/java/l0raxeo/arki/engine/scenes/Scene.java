@@ -35,6 +35,15 @@ public abstract class Scene
         go.start();
     }
 
+    public GameObject getGameObject(String name)
+    {
+        for (GameObject go : getGameObjects())
+            if (go.getName().equals(name))
+                return go;
+
+        return null;
+    }
+
     public GameObject getGameObjectWithUid(int uid)
     {
         int low = 0;

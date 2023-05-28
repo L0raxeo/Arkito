@@ -1,5 +1,6 @@
 package l0raxeo.arki.engine.dataStructure;
 
+import l0raxeo.arki.engine.audio.AudioClip;
 import l0raxeo.arki.engine.dataStructure.fileStructure.FileLoader;
 
 import java.awt.*;
@@ -13,6 +14,7 @@ public class AssetPool
     //          resource, File
     private static final Map<String, Font> loadedFonts = new HashMap<>();
     private static final Map<String, BufferedImage> loadedBufferedImages = new HashMap<>();
+    private static final Map<String, AudioClip> loadedAudioClips = new HashMap<>();
 
     public static BufferedImage getBufferedImage(String resource)
     {
@@ -27,6 +29,21 @@ public class AssetPool
             img = loadedBufferedImages.get(resource);
 
         return img;
+    }
+
+    public static AudioClip getAudioClip(String name, String resource)
+    {
+        AudioClip audioClip;
+
+        if (!loadedAudioClips.containsKey(resource))
+        {
+            audioClip = new AudioClip(name, resource, 1);
+            loadedAudioClips.put(resource, audioClip);
+        }
+        else
+            audioClip = loadedAudioClips.get(resource);
+
+        return audioClip;
     }
 
     public static Font getFont(String resource, int size)
@@ -64,6 +81,11 @@ public class AssetPool
     public static void unloadAllFonts()
     {
         loadedFonts.clear();
+    }
+
+    public static void unloadAllAudioClips()
+    {
+        loadedAudioClips.clear();
     }
 
 }

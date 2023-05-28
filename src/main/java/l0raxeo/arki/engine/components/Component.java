@@ -1,5 +1,6 @@
 package l0raxeo.arki.engine.components;
 
+import l0raxeo.arki.engine.collision.Collision;
 import l0raxeo.arki.engine.objects.GameObject;
 
 import java.awt.*;
@@ -19,9 +20,15 @@ public abstract class Component
 
     }
 
-    public abstract void update(double dt);
+    public void update(double dt)
+    {
 
-    public abstract void render(Graphics g);
+    }
+
+    public void render(Graphics g)
+    {
+
+    }
 
     public void generateId()
     {
@@ -33,6 +40,8 @@ public abstract class Component
     {
         return uid;
     }
+
+    public void onCollision(Collision collision) {}
 
     public void onDestroy()
     {

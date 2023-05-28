@@ -39,4 +39,9 @@ public class FileLoader
         return null;
     }
 
+    public static File loadFile(String path)
+    {
+        return new File(path);
+    }
+
 }

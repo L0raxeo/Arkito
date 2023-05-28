@@ -8,7 +8,7 @@ import org.joml.Vector3i;
 public class Transform
 {
 
-    private Vector2i position;
+    public Vector2i position;
     public Vector2i scale;
     private int zIndex = 0;
     public float rotation;
