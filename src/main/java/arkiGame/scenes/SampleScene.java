@@ -19,18 +19,21 @@ import org.joml.Vector3i;
 import java.awt.*;
 
 @DefaultScene()
-public class SampleScene extends Scene {
+public class SampleScene extends Scene
+{
 
     private GameObject player;
 
     @Override
-    public void loadResources() {
+    public void loadResources()
+    {
         setBackdrop(Color.DARK_GRAY);
         new SampleAssetLoader().loadAssets();
     }
 
     @Override
-    public void start() {
+    public void start()
+    {
         addGameObject(Prefabs.generate(
                 "Test",
                 new Vector3i(50, 500, 1),
@@ -54,17 +57,20 @@ public class SampleScene extends Scene {
     }
 
     @Override
-    public void update(double dt) {
+    public void update(double dt)
+    {
         updateSceneGameObjects(dt);
 
-        if (player != null) {
+        if (player != null)
+        {
             if (MouseManager.hasPressedInput())
                 player.getComponent(RigidBody.class).addForce(new Vector2i(0, -10));
         }
     }
 
     @Override
-    public void render(Graphics g) {
+    public void render(Graphics g)
+    {
         renderSceneGameObjects(g);
     }
 }
