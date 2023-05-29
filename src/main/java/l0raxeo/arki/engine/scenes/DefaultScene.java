@@ -7,4 +7,11 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface DefaultScene {}
+public @interface DefaultScene
+{
+
+    String windowTitle();
+    int windowWidth();
+    int windowHeight();
+
+}

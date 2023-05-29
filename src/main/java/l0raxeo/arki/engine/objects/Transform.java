@@ -1,7 +1,7 @@
 package l0raxeo.arki.engine.objects;
 
 import l0raxeo.arki.renderer.AppWindow;
-import l0raxeo.arki.renderer.gameRendering.Camera;
+import l0raxeo.arki.renderer.gameRenderingComponents.Camera;
 import org.joml.Vector2i;
 import org.joml.Vector3i;
 

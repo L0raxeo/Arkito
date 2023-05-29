@@ -1,4 +1,4 @@
-package l0raxeo.arki.renderer.gameRendering;
+package l0raxeo.arki.renderer.gameRenderingComponents;
 
 import l0raxeo.arki.renderer.AppWindow;
 import org.joml.Vector2i;

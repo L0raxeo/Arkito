@@ -14,7 +14,7 @@ import org.joml.Vector3i;
 
 import java.awt.*;
 
-@DefaultScene
+@DefaultScene(windowTitle = "Arki Game", windowWidth = 1080, windowHeight = 720)
 public class SampleScene extends Scene {
 
     private GameObject player;

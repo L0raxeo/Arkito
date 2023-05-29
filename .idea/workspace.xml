@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="everything">
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioClip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/collision/Collision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/collision/CollisionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/Bounds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/BoxBounds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/RigidBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/physicsComponents/Physics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/RectangleRenderer.java" afterDir="false" />
+    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="audiomanager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/AssetPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/AssetPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/fileStructure/FileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/fileStructure/FileLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/Transform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/DefaultScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/DefaultScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRendering/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRenderingComponents/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRendering/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRenderingComponents/Camera.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +62,10 @@
       <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\engine" />
       <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\renderer" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="l0raxeo.arki.renderer" />
+      <recent name="l0raxeo.arki.renderer.appWindow" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Arkito" type="Application" factoryName="Application">
@@ -94,8 +89,17 @@
       <workItem from="1685153019354" duration="7937000" />
       <workItem from="1685218442774" duration="806000" />
       <workItem from="1685222610727" duration="7850000" />
-      <workItem from="1685312746246" duration="1703000" />
+      <workItem from="1685312746246" duration="1745000" />
+      <workItem from="1685323126381" duration="3188000" />
     </task>
+    <task id="LOCAL-00001" summary="audiomanager">
+      <created>1685314596250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685314596250</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +118,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="everything" />
+    <MESSAGE value="audiomanager" />
+    <option name="LAST_COMMIT_MESSAGE" value="audiomanager" />
   </component>
 </project>

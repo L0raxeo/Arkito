@@ -115,39 +115,61 @@ public class AppWindow implements Runnable
 
     private void init()
     {
-        // Create JFrame
+        initializeScene();
+        createJFrame();
+        createCanvas();
+        combineJFrameAndCanvas();
+        createWindowKeyListener();
+        createWindowMouseListener();
+        guiLayer = GuiLayer.getInstance();
+        setVisible(true);
+    }
+
+    private void initializeScene()
+    {
+        Class<?> defaultSceneClass = Objects.requireNonNull(getDefaultScene(ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes")));
+        APP_TITLE = defaultSceneClass.getAnnotation(DefaultScene.class).windowTitle();
+        WINDOW_WIDTH = defaultSceneClass.getAnnotation(DefaultScene.class).windowWidth();
+        WINDOW_HEIGHT = defaultSceneClass.getAnnotation(DefaultScene.class).windowHeight();
+        WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
+        changeScene(defaultSceneClass);
+    }
+
+    private void createJFrame()
+    {
         frame = new JFrame(APP_TITLE);
         frame.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
+    }
 
-        // Create Canvas
+    private void createCanvas()
+    {
         canvas = new Canvas();
         canvas.setPreferredSize(WINDOW_SIZE);
         canvas.setMaximumSize(WINDOW_SIZE);
         canvas.setMinimumSize(WINDOW_SIZE);
         canvas.setFocusable(false);
+    }
 
-        // Combine JFrame and Canvas
+    private void combineJFrameAndCanvas()
+    {
         frame.add(canvas);
         frame.pack();
+    }
 
-        // Create Input Listeners
+    private void createWindowKeyListener()
+    {
         keyListener = new KeyManager();
-        mouseListener = new MouseManager();
-
-        // Add Input Listeners
         frame.addKeyListener(keyListener);
+    }
+
+    private void createWindowMouseListener()
+    {
+        mouseListener = new MouseManager();
         canvas.addMouseListener(mouseListener);
         canvas.addMouseMotionListener(mouseListener);
-
-        // GuiLayer
-        guiLayer = GuiLayer.getInstance();
-
-        setVisible(true);
-
-        changeScene(Objects.requireNonNull(getDefaultScene(ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes"))));
     }
 
     private Class<?> getDefaultScene(Set<Class<?>> classes)
@@ -211,28 +233,21 @@ public class AppWindow implements Runnable
     private void render()
     {
         BufferStrategy bs = getCanvas().getBufferStrategy();
-
         if (bs == null)
         {
             getCanvas().createBufferStrategy(3);
             return;
         }
-
         Graphics g = bs.getDrawGraphics();
         // clear screen
         g.clearRect(0, 0, getFrame().getWidth(), getFrame().getHeight());
         // render scene here
-
         g.setColor(backdrop);
         g.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-
         currentScene.render(g);
         guiLayer.render(g);
-
         LoadingScreen.renderLoadingScreen(g);
-
         GraphicsDraw.render(g);
-
         // end drawing
         bs.show();
         g.dispose();
