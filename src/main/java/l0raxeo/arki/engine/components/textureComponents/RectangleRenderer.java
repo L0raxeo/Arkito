@@ -19,7 +19,8 @@ public class RectangleRenderer extends Component
     }
 
     @Override
-    public void render(Graphics g) {
+    public void render(Graphics g)
+    {
         g.setColor(color);
 
         if (fill)
@@ -27,4 +28,5 @@ public class RectangleRenderer extends Component
         else
             g.drawRect(gameObject.transform.getScreenPosition().x, gameObject.transform.getScreenPosition().y, gameObject.transform.scale.x, gameObject.transform.scale.y);
     }
+
 }

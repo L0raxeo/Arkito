@@ -1,4 +1,5 @@
-package l0raxeo.arki.engine.scenes;
+package l0raxeo.arki.engine.main;
+
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,9 +8,12 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface DefaultScene
+public @interface AppConfig
 {
 
-
+    String windowTitle();
+    int windowWidth();
+    int windowHeight();
+    boolean resizeable();
 
 }

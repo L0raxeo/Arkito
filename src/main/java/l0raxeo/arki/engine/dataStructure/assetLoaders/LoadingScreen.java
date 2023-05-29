@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.scenes.assetLoaders;
+package l0raxeo.arki.engine.dataStructure.assetLoaders;
 
 import l0raxeo.arki.engine.dataStructure.AssetPool;
 import l0raxeo.arki.engine.ui.GuiText;

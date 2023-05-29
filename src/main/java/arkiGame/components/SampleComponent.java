@@ -9,7 +9,7 @@ public class SampleComponent extends Component
 
     @Override
     public void update(double dt) {
-
+        gameObject.transform.rotation++;
     }
 
     @Override

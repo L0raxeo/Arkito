@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.scenes.assetLoaders;
+package l0raxeo.arki.engine.dataStructure.assetLoaders;
 
 public interface AssetLoader
 {

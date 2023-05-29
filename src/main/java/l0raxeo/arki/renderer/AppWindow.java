@@ -3,15 +3,17 @@ package l0raxeo.arki.renderer;
 import l0raxeo.arki.engine.dataStructure.classStructure.ClassFinder;
 import l0raxeo.arki.engine.input.keyboard.KeyManager;
 import l0raxeo.arki.engine.input.mouse.MouseManager;
+import l0raxeo.arki.engine.main.AppConfig;
 import l0raxeo.arki.engine.scenes.DefaultScene;
 import l0raxeo.arki.engine.scenes.Scene;
-import l0raxeo.arki.engine.scenes.assetLoaders.LoadingScreen;
+import l0raxeo.arki.engine.dataStructure.assetLoaders.LoadingScreen;
 import l0raxeo.arki.engine.ui.GuiLayer;
 import l0raxeo.arki.renderer.postRenderGraphics.GraphicsDraw;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.List;
@@ -25,6 +27,7 @@ public class AppWindow implements Runnable
     private Canvas canvas;
     public static String APP_TITLE;
     public static int WINDOW_WIDTH, WINDOW_HEIGHT;
+    public static boolean IS_RESIZEABLE;
     public static Dimension WINDOW_SIZE;
     private Thread thread;
     private boolean running = false;
@@ -41,6 +44,7 @@ public class AppWindow implements Runnable
         APP_TITLE = "Arkito_L0raxeo";
         WINDOW_WIDTH = 768;
         WINDOW_HEIGHT = 768;
+        IS_RESIZEABLE = false;
         WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
     }
 
@@ -115,7 +119,7 @@ public class AppWindow implements Runnable
 
     private void init()
     {
-        initializeScene();
+        loadAppWindowConfiguration();
         createJFrame();
         createCanvas();
         combineJFrameAndCanvas();
@@ -123,15 +127,22 @@ public class AppWindow implements Runnable
         createWindowMouseListener();
         guiLayer = GuiLayer.getInstance();
         setVisible(true);
+        initializeScene();
+    }
+
+    private void loadAppWindowConfiguration()
+    {
+        Class<?> appConfig = Objects.requireNonNull(findAnnotatedClass(ClassFinder.findAllClassesUsingClassLoader("arkiGame"), AppConfig.class));
+        APP_TITLE = appConfig.getAnnotation(AppConfig.class).windowTitle();
+        WINDOW_WIDTH = appConfig.getAnnotation(AppConfig.class).windowWidth();
+        WINDOW_HEIGHT = appConfig.getAnnotation(AppConfig.class).windowHeight();
+        IS_RESIZEABLE = appConfig.getAnnotation(AppConfig.class).resizeable();
+        WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
     }
 
     private void initializeScene()
     {
-        Class<?> defaultSceneClass = Objects.requireNonNull(getDefaultScene(ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes")));
-        APP_TITLE = defaultSceneClass.getAnnotation(DefaultScene.class).windowTitle();
-        WINDOW_WIDTH = defaultSceneClass.getAnnotation(DefaultScene.class).windowWidth();
-        WINDOW_HEIGHT = defaultSceneClass.getAnnotation(DefaultScene.class).windowHeight();
-        WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
+        Class<?> defaultSceneClass = Objects.requireNonNull(findAnnotatedClass(ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes"), DefaultScene.class));
         changeScene(defaultSceneClass);
     }
 
@@ -140,7 +151,7 @@ public class AppWindow implements Runnable
         frame = new JFrame(APP_TITLE);
         frame.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setResizable(false);
+        frame.setResizable(IS_RESIZEABLE);
         frame.setLocationRelativeTo(null);
     }
 
@@ -172,12 +183,12 @@ public class AppWindow implements Runnable
         canvas.addMouseMotionListener(mouseListener);
     }
 
-    private Class<?> getDefaultScene(Set<Class<?>> classes)
+    private Class<?> findAnnotatedClass(Set<Class<?>> classes, Class<? extends Annotation> annotation)
     {
-        for (Class<?> scene : classes)
+        for (Class<?> c : classes)
         {
-            if (scene.isAnnotationPresent(DefaultScene.class))
-                return scene;
+            if (c.isAnnotationPresent(annotation))
+                return c;
         }
 
         return null;
@@ -228,6 +239,14 @@ public class AppWindow implements Runnable
         mouseListener.update();
         keyListener.update();
         currentScene.update(dt);
+        updateWindowSize();
+    }
+
+    private void updateWindowSize()
+    {
+        WINDOW_WIDTH = getFrame().getWidth();
+        WINDOW_HEIGHT = getFrame().getHeight();
+        WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
     }
 
     private void render()
@@ -240,7 +259,7 @@ public class AppWindow implements Runnable
         }
         Graphics g = bs.getDrawGraphics();
         // clear screen
-        g.clearRect(0, 0, getFrame().getWidth(), getFrame().getHeight());
+        g.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         // render scene here
         g.setColor(backdrop);
         g.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
