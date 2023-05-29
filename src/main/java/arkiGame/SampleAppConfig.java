@@ -6,5 +6,4 @@ package arkiGame;
         windowHeight = 720,
         resizeable = true
 )
-public class SampleAppConfig {
-}
+public class SampleAppConfig {}

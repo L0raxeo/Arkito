@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="cleaned up window">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/default_font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/samples/textures/floor_tile_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/samples/textures/sample_texture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/SampleAppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/assetLoaders/SampleAssetLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/ImageTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/OvalRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/main/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/RectangleRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/RectangleRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/prefabs/Prefabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/prefabs/Prefabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/DefaultScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/DefaultScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/assetLoaders/AssetLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/assetLoaders/AssetLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/assetLoaders/LoadingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/assetLoaders/LoadingScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
-    </list>
+    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="final stuff" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +89,7 @@
       <workItem from="1685323126381" duration="7008000" />
       <workItem from="1685372508388" duration="42000" />
       <workItem from="1685374345112" duration="439000" />
+      <workItem from="1685377171886" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="audiomanager">
       <created>1685314596250</created>
@@ -122,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685332078446</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="final stuff">
+      <created>1685377366971</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685377366971</updated>
+    </task>
+    <task id="LOCAL-00004" summary="final stuff">
+      <created>1685377407794</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685377407794</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +140,7 @@
     <MESSAGE value="everything" />
     <MESSAGE value="audiomanager" />
     <MESSAGE value="cleaned up window" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up window" />
+    <MESSAGE value="final stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="final stuff" />
   </component>
 </project>
