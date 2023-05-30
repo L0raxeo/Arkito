@@ -36,7 +36,7 @@ public class SampleScene extends Scene
     public void start()
     {
         addGameObject(Prefabs.generate(
-                "Test",
+                "sample_object",
                 new Vector3i(50, 500, 1),
                 new Vector2i(32, 32),
                 45,
@@ -46,8 +46,9 @@ public class SampleScene extends Scene
                 new BoxBounds(),
                 new SampleComponent()
         ));
+
         addGameObject(Prefabs.generate(
-                "platform",
+                "sample_platform",
                 new Vector3i(16, 100, 1),
                 new Vector2i(300, 32),
                 new RectangleRenderer(Color.WHITE, true),

@@ -18,9 +18,4 @@ public class SampleComponent extends Component
         gameObject.transform.rotation++;
     }
 
-    @Override
-    public void render(Graphics g) {
-
-    }
-
 }
