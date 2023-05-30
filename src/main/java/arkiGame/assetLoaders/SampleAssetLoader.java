@@ -8,17 +8,16 @@ public class SampleAssetLoader implements AssetLoader
 {
 
     @Override
-    public void loadAssets()
+    public void loadAssets(long minDurationMillis)
     {
-        LoadingScreen.load();
+        LoadingScreen.load(minDurationMillis);
         AssetPool.getBufferedImage("assets/samples/textures/sample_texture.png");
-        LoadingScreen.stop();
     }
 
     @Override
     public void unloadAssets()
     {
-
+        AssetPool.unloadAllBufferedImages();
     }
 
 }

@@ -110,6 +110,7 @@ public class AppWindow implements Runnable
         return currentScene;
     }
 
+    @Override
     public void run()
     {
         init();

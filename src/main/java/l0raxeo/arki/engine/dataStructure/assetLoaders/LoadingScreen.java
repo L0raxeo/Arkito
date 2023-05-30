@@ -11,7 +11,7 @@ public class LoadingScreen
 {
 
     private static final long NOT_LOADING = -1;
-    private static final long MIN_DURATION_MILLI = 1000;
+    private static long MIN_DURATION_MILLI = NOT_LOADING;
 
     private static long minEndTime = NOT_LOADING;
 
@@ -31,27 +31,16 @@ public class LoadingScreen
                     Color.WHITE,
                     AssetPool.getFont("assets/fonts/default_font.ttf", 24)
             );
+
+            isLoading = System.currentTimeMillis() < minEndTime;
         }
     }
 
-    public static void load()
+    public static void load(long minDurationMillis)
     {
+        MIN_DURATION_MILLI = minDurationMillis;
         minEndTime = System.currentTimeMillis() + MIN_DURATION_MILLI;
         isLoading = true;
-    }
-
-    public static void stop()
-    {
-        waitUntilMinEndTime();
-
-        minEndTime = NOT_LOADING;
-        isLoading = false;
-    }
-
-    private static void waitUntilMinEndTime()
-    {
-        while (System.currentTimeMillis() < minEndTime)
-            isLoading = true;
     }
 
     public static long getMinDurationMilli()

@@ -22,13 +22,14 @@ import java.awt.*;
 public class SampleScene extends Scene
 {
 
-    private GameObject player;
+    private SampleAssetLoader sampleAssetLoader;
 
     @Override
     public void loadResources()
     {
         setBackdrop(Color.DARK_GRAY);
-        new SampleAssetLoader().loadAssets();
+        sampleAssetLoader = new SampleAssetLoader();
+        sampleAssetLoader.loadAssets(1000);
     }
 
     @Override
@@ -53,19 +54,12 @@ public class SampleScene extends Scene
                 new RigidBody(1),
                 new BoxBounds()
         ));
-        player = getGameObject("Test");
     }
 
     @Override
     public void update(double dt)
     {
         updateSceneGameObjects(dt);
-
-        if (player != null)
-        {
-            if (MouseManager.hasPressedInput())
-                player.getComponent(RigidBody.class).addForce(new Vector2i(0, -10));
-        }
     }
 
     @Override
@@ -73,4 +67,11 @@ public class SampleScene extends Scene
     {
         renderSceneGameObjects(g);
     }
+
+    @Override
+    public void onDestroy()
+    {
+        sampleAssetLoader.unloadAssets();
+    }
+
 }
