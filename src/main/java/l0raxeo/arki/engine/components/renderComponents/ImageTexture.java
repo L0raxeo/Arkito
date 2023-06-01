@@ -1,6 +1,7 @@
 package l0raxeo.arki.engine.components.renderComponents;
 
 import l0raxeo.arki.engine.components.Component;
+import org.joml.Vector2f;
 import org.joml.Vector2i;
 
 import java.awt.*;
@@ -14,8 +15,8 @@ public class ImageTexture extends Component
     /**
      * world coordinates
      */
-    private Vector2i texPos;
-    private Vector2i texScale;
+    private Vector2f texPos;
+    private Vector2f texScale;
     private final Vector2i rotationAnchor;
     private float rotation = -1;
     private final boolean inheritRotation;
@@ -72,7 +73,7 @@ public class ImageTexture extends Component
             g2d.rotate(Math.toRadians(rotation), texPos.x + rotationAnchor.x, texPos.y + rotationAnchor.y); // add cam offset
         else
             g2d.rotate(Math.toRadians(rotation), texPos.x + texScale.x - (rotationAnchor.x * 1.6), texPos.y + rotationAnchor.y); // add cam offset
-        g2d.drawImage(texture, texPos.x, texPos.y, texScale.x, texScale.y, null); // add cam offset
+        g2d.drawImage(texture, (int) texPos.x, (int) texPos.y, (int) texScale.x, (int) texScale.y, null); // add cam offset
         g2d.setTransform(old);
     }
 
@@ -98,12 +99,12 @@ public class ImageTexture extends Component
         texScale.y = y;
     }
 
-    public Vector2i getTexPos()
+    public Vector2f getTexPos()
     {
         return texPos;
     }
 
-    public Vector2i getTexScale()
+    public Vector2f getTexScale()
     {
         return texScale;
     }

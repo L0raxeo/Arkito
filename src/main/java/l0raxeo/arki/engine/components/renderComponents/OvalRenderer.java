@@ -24,9 +24,9 @@ public class OvalRenderer extends Component
         g.setColor(color);
 
         if (fill)
-            g.fillOval(gameObject.transform.getScreenPosition().x, gameObject.transform.getScreenPosition().y, gameObject.transform.scale.x, gameObject.transform.scale.y);
+            g.fillOval((int) gameObject.transform.getScreenPosition().x, (int) gameObject.transform.getScreenPosition().y, (int) gameObject.transform.scale.x, (int) gameObject.transform.scale.y);
         else
-            g.drawOval(gameObject.transform.getScreenPosition().x, gameObject.transform.getScreenPosition().y, gameObject.transform.scale.x, gameObject.transform.scale.y);
+            g.drawOval((int) gameObject.transform.getScreenPosition().x, (int) gameObject.transform.getScreenPosition().y, (int) gameObject.transform.scale.x, (int) gameObject.transform.scale.y);
     }
 
 }

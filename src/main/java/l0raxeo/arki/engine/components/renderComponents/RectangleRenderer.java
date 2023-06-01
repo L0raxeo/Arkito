@@ -24,9 +24,9 @@ public class RectangleRenderer extends Component
         g.setColor(color);
 
         if (fill)
-            g.fillRect(gameObject.transform.getScreenPosition().x, gameObject.transform.getScreenPosition().y, gameObject.transform.scale.x, gameObject.transform.scale.y);
+            g.fillRect((int) gameObject.transform.getScreenPosition().x, (int) gameObject.transform.getScreenPosition().y, (int) gameObject.transform.scale.x, (int) gameObject.transform.scale.y);
         else
-            g.drawRect(gameObject.transform.getScreenPosition().x, gameObject.transform.getScreenPosition().y, gameObject.transform.scale.x, gameObject.transform.scale.y);
+            g.drawRect((int) gameObject.transform.getScreenPosition().x, (int) gameObject.transform.getScreenPosition().y, (int) gameObject.transform.scale.x, (int) gameObject.transform.scale.y);
     }
 
 }

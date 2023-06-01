@@ -11,8 +11,9 @@ import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.objects.prefabs.Prefabs;
 import l0raxeo.arki.engine.scenes.DefaultScene;
 import l0raxeo.arki.engine.scenes.Scene;
+import org.joml.Vector2f;
 import org.joml.Vector2i;
-import org.joml.Vector3i;
+import org.joml.Vector3f;
 
 import java.awt.*;
 
@@ -35,8 +36,8 @@ public class SampleScene extends Scene
     {
         addGameObject(Prefabs.generate(
                 "sample_object",
-                new Vector3i(50, 500, 1),
-                new Vector2i(32, 32),
+                new Vector3f(50, 500, 1),
+                new Vector2f(32, 32),
                 45,
                 new ImageTexture(AssetPool.getBufferedImage("assets/samples/textures/sample_texture.png"), new Vector2i(16, 16)),
                 new RigidBody(1),
@@ -47,8 +48,8 @@ public class SampleScene extends Scene
 
         addGameObject(Prefabs.generate(
                 "sample_platform",
-                new Vector3i(16, 100, 1),
-                new Vector2i(300, 32),
+                new Vector3f(16, 100, 1),
+                new Vector2f(300, 32),
                 new RectangleRenderer(Color.WHITE, true),
                 new RigidBody(1),
                 new BoxBounds()

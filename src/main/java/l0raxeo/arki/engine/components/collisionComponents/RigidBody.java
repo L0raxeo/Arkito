@@ -3,6 +3,7 @@ package l0raxeo.arki.engine.components.collisionComponents;
 import l0raxeo.arki.engine.collision.Collision;
 import l0raxeo.arki.engine.collision.CollisionType;
 import l0raxeo.arki.engine.components.Component;
+import org.joml.Vector2f;
 import org.joml.Vector2i;
 
 import java.util.ArrayList;
@@ -11,12 +12,12 @@ import java.util.List;
 public class RigidBody extends Component
 {
 
-    public Vector2i velocity;
+    public Vector2f velocity;
     private final float friction;
 
     public RigidBody(float friction)
     {
-        this.velocity = new Vector2i();
+        this.velocity = new Vector2f();
         this.friction = friction;
     }
 
@@ -106,20 +107,20 @@ public class RigidBody extends Component
                 velY += v.y;
             }
 
-            velocity = new Vector2i(velX, velY);
+            velocity = new Vector2f(velX, velY);
         }
 
         moveForces.clear();
     }
 
-    public void addForce(Vector2i force)
+    public void addForce(Vector2f force)
     {
         velocity.add(force);
     }
 
     private final List<Vector2i> moveForces = new ArrayList<>();
 
-    public void move(Vector2i velocity)
+    public void move(Vector2f velocity)
     {
         this.velocity = velocity;
     }
@@ -134,7 +135,7 @@ public class RigidBody extends Component
         this.velocity.y = y;
     }
 
-    public Vector2i getVelocity()
+    public Vector2f getVelocity()
     {
         return velocity;
     }

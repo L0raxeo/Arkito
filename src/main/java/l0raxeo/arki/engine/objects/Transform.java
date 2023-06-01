@@ -2,59 +2,60 @@ package l0raxeo.arki.engine.objects;
 
 import l0raxeo.arki.renderer.AppWindow;
 import l0raxeo.arki.renderer.gameRenderingComponents.Camera;
-import org.joml.Vector2i;
+import org.joml.Vector2f;
+import org.joml.Vector3f;
 import org.joml.Vector3i;
 
 public class Transform
 {
 
-    public Vector2i position;
-    public Vector2i scale;
+    public Vector2f position;
+    public Vector2f scale;
     private int zIndex = 0;
     public float rotation;
 
-    public Transform(Vector3i position, Vector2i scale, float rotation)
+    public Transform(Vector3f position, Vector2f scale, float rotation)
     {
         init(position, scale, rotation);
     }
 
-    public Transform(Vector3i position, Vector2i scale)
+    public Transform(Vector3f position, Vector2f scale)
     {
         init(position, scale, 0);
     }
 
-    public void init(Vector3i worldPosition, Vector2i scale, float rotation)
+    public void init(Vector3f worldPosition, Vector2f scale, float rotation)
     {
         // world to screen coordinates
-        this.position = new Vector2i(worldPosition.x, AppWindow.WINDOW_HEIGHT - worldPosition.y);
+        this.position = new Vector2f(worldPosition.x, AppWindow.WINDOW_HEIGHT - worldPosition.y);
         this.scale = scale;
         this.rotation = rotation;
-        this.zIndex = worldPosition.z;
+        this.zIndex = (int) worldPosition.z;
     }
 
-    public Vector2i worldPosition()
+    public Vector2f worldPosition()
     {
-        return new Vector2i(position.x, AppWindow.WINDOW_HEIGHT - position.y);
+        return new Vector2f(position.x, AppWindow.WINDOW_HEIGHT - position.y);
     }
 
-    public Vector2i getScreenPosition()
+    public Vector2f getScreenPosition()
     {
-        return new Vector2i(position.x + Camera.xOffset(), position.y + Camera.yOffset());
+        return new Vector2f(position.x + Camera.xOffset(), position.y + Camera.yOffset());
     }
 
-    public Vector2i getCenterPosition()
+    public Vector2f getCenterPosition()
     {
         return getScreenPosition().add(scale.x / 2, scale.y / 2);
     }
 
-    public void setPosition(Vector2i worldPosition)
+    public void setPosition(Vector2f worldPosition)
     {
-        this.position = new Vector2i(worldPosition.x, AppWindow.WINDOW_HEIGHT - worldPosition.y);
+        this.position = new Vector2f(worldPosition.x, AppWindow.WINDOW_HEIGHT - worldPosition.y);
     }
 
     public void setPosition(Vector3i worldPosition)
     {
-        this.position = new Vector2i(worldPosition.x, AppWindow.WINDOW_HEIGHT - worldPosition.y);
+        this.position = new Vector2f(worldPosition.x, AppWindow.WINDOW_HEIGHT - worldPosition.y);
         setzIndex(worldPosition.z);
     }
 
@@ -68,7 +69,7 @@ public class Transform
         return zIndex;
     }
 
-    public void move(Vector2i worldCoordinateOffset)
+    public void move(Vector2f worldCoordinateOffset)
     {
         this.position.x += worldCoordinateOffset.x;
         this.position.y -= worldCoordinateOffset.y;

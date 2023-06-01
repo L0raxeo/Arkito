@@ -22,7 +22,7 @@ public class Physics extends Component
 
     private void fall()
     {
-        float GRAVITY_ACCELERATION = 1;
+        float GRAVITY_ACCELERATION = 0.5f;
         rigidBody.velocity.y += GRAVITY_ACCELERATION;
 
         int TERMINAL_VELOCITY = 15;
