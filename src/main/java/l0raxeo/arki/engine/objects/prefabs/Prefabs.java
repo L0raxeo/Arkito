@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.prefabs;
+package l0raxeo.arki.engine.objects.prefabs;
 
 import l0raxeo.arki.engine.components.Component;
 import l0raxeo.arki.engine.objects.GameObject;

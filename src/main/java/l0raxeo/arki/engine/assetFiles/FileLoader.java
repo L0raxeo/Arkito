@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.dataStructure.fileStructure;
+package l0raxeo.arki.engine.assetFiles;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

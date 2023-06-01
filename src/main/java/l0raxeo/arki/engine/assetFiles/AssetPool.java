@@ -1,7 +1,6 @@
-package l0raxeo.arki.engine.dataStructure;
+package l0raxeo.arki.engine.assetFiles;
 
 import l0raxeo.arki.engine.audio.AudioClip;
-import l0raxeo.arki.engine.dataStructure.fileStructure.FileLoader;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

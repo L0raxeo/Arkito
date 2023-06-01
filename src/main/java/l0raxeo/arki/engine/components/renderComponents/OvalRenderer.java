@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.components.textureComponents;
+package l0raxeo.arki.engine.components.renderComponents;
 
 import l0raxeo.arki.engine.components.Component;
 

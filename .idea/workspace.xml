@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="final stuff">
+    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="cleaning up sample project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/SampleAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/SampleAppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/assetLoaders/SampleAssetLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/assetLoaders/SampleAssetLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/assetLoaders/LoadingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/assetLoaders/LoadingScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioClip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioClip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/ImageTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/renderComponents/ImageTexture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/OvalRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/renderComponents/OvalRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/textureComponents/RectangleRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/renderComponents/RectangleRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/AssetPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/assetFiles/AssetPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/assetLoaders/AssetLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/loaders/AssetLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/assetLoaders/LoadingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/loaders/LoadingScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/classStructure/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/classStructure/ClassFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/dataStructure/fileStructure/FileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/assetFiles/FileLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/main/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/mainApp/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/main/ArkitoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/mainApp/ArkitoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/prefabs/Prefabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/prefabs/Prefabs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +85,7 @@
     <configuration name="Arkito" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="l0raxeo.arki.engine.main.ArkitoApp" />
+      <option name="MAIN_CLASS_NAME" value="l0raxeo.arki.engine.mainApp.ArkitoApp" />
       <module name="Arkito.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,7 +108,9 @@
       <workItem from="1685372508388" duration="42000" />
       <workItem from="1685374345112" duration="439000" />
       <workItem from="1685377171886" duration="427000" />
-      <workItem from="1685387986447" duration="1757000" />
+      <workItem from="1685387986447" duration="2319000" />
+      <workItem from="1685478409822" duration="1745000" />
+      <workItem from="1685569203839" duration="2606000" />
     </task>
     <task id="LOCAL-00001" summary="audiomanager">
       <created>1685314596250</created>
@@ -132,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685377577021</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed loading screen issue">
+      <created>1685416589511</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685416589511</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cleaning up sample project">
+      <created>1685416728304</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685416728304</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +183,8 @@
     <MESSAGE value="audiomanager" />
     <MESSAGE value="cleaned up window" />
     <MESSAGE value="final stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="final stuff" />
+    <MESSAGE value="fixed loading screen issue" />
+    <MESSAGE value="cleaning up sample project" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaning up sample project" />
   </component>
 </project>

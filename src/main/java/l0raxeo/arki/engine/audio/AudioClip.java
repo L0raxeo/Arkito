@@ -1,6 +1,6 @@
 package l0raxeo.arki.engine.audio;
 
-import l0raxeo.arki.engine.dataStructure.fileStructure.FileLoader;
+import l0raxeo.arki.engine.assetFiles.FileLoader;
 
 import javax.sound.sampled.*;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.dataStructure.classStructure;
+package l0raxeo.arki.engine.classStructure;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

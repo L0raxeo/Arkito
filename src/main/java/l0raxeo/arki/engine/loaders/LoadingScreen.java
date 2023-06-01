@@ -1,6 +1,6 @@
-package l0raxeo.arki.engine.dataStructure.assetLoaders;
+package l0raxeo.arki.engine.loaders;
 
-import l0raxeo.arki.engine.dataStructure.AssetPool;
+import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.ui.GuiText;
 import l0raxeo.arki.renderer.AppWindow;
 import org.joml.Vector2i;

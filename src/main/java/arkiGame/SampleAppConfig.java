@@ -1,6 +1,6 @@
 package arkiGame;
 
-@l0raxeo.arki.engine.main.AppConfig(
+@l0raxeo.arki.engine.mainApp.AppConfig(
         windowTitle = "ArkiGame",
         windowWidth = 720,
         windowHeight = 720,

@@ -1,8 +1,8 @@
 package arkiGame.assetLoaders;
 
-import l0raxeo.arki.engine.dataStructure.AssetPool;
-import l0raxeo.arki.engine.dataStructure.assetLoaders.AssetLoader;
-import l0raxeo.arki.engine.dataStructure.assetLoaders.LoadingScreen;
+import l0raxeo.arki.engine.assetFiles.AssetPool;
+import l0raxeo.arki.engine.loaders.AssetLoader;
+import l0raxeo.arki.engine.loaders.LoadingScreen;
 
 public class SampleAssetLoader implements AssetLoader
 {

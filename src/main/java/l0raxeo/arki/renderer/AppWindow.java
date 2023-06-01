@@ -1,12 +1,12 @@
 package l0raxeo.arki.renderer;
 
-import l0raxeo.arki.engine.dataStructure.classStructure.ClassFinder;
+import l0raxeo.arki.engine.classStructure.ClassFinder;
 import l0raxeo.arki.engine.input.keyboard.KeyManager;
 import l0raxeo.arki.engine.input.mouse.MouseManager;
-import l0raxeo.arki.engine.main.AppConfig;
+import l0raxeo.arki.engine.mainApp.AppConfig;
 import l0raxeo.arki.engine.scenes.DefaultScene;
 import l0raxeo.arki.engine.scenes.Scene;
-import l0raxeo.arki.engine.dataStructure.assetLoaders.LoadingScreen;
+import l0raxeo.arki.engine.loaders.LoadingScreen;
 import l0raxeo.arki.engine.ui.GuiLayer;
 import l0raxeo.arki.renderer.postRenderGraphics.GraphicsDraw;
 

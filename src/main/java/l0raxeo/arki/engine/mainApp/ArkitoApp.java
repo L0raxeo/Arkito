@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.main;
+package l0raxeo.arki.engine.mainApp;
 
 import l0raxeo.arki.renderer.AppWindow;
 
