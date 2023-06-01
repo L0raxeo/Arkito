@@ -5,8 +5,6 @@ import l0raxeo.arki.engine.components.collisionComponents.RigidBody;
 import l0raxeo.arki.engine.input.mouse.MouseManager;
 import org.joml.Vector2i;
 
-import java.awt.*;
-
 public class SampleComponent extends Component
 {
 
