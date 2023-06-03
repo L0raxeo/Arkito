@@ -13,6 +13,7 @@ import l0raxeo.arki.renderer.postRenderGraphics.GraphicsDraw;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.io.IOException;
 import java.util.*;
 
 public class AppWindow implements Runnable
@@ -64,7 +65,13 @@ public class AppWindow implements Runnable
 
     private void loadAppWindowConfiguration()
     {
-        Class<?> appConfig = Objects.requireNonNull(ClassFinder.findAnnotatedClass(ClassFinder.findAllClassesUsingClassLoader("arkiGame"), AppConfig.class));
+        Set<Class<?>> classesInArkiPackage;
+        try {
+            classesInArkiPackage = ClassFinder.findAllClassesUsingClassLoader("arkiGame");
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        Class<?> appConfig = Objects.requireNonNull(ClassFinder.findAnnotatedClass(classesInArkiPackage, AppConfig.class));
         APP_TITLE = appConfig.getAnnotation(AppConfig.class).windowTitle();
         WINDOW_WIDTH = appConfig.getAnnotation(AppConfig.class).windowWidth();
         WINDOW_HEIGHT = appConfig.getAnnotation(AppConfig.class).windowHeight();

@@ -3,10 +3,12 @@ package l0raxeo.arki.engine.scenes;
 import l0raxeo.arki.engine.classStructure.ClassFinder;
 import l0raxeo.arki.engine.ui.GuiLayer;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class SceneManager
 {
@@ -75,8 +77,13 @@ public class SceneManager
 
     public static void initializeScene()
     {
-        Class<?> defaultSceneClass = Objects.requireNonNull(ClassFinder.findAnnotatedClass(ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes"), DefaultScene.class));
-        changeScene(defaultSceneClass);
+        try {
+            Set<Class<?>> classesInArkiPackage = ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes");
+            Class<?> defaultSceneClass = Objects.requireNonNull(ClassFinder.findAnnotatedClass(classesInArkiPackage, DefaultScene.class));
+            changeScene(defaultSceneClass);
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static Scene getActiveScene()
