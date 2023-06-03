@@ -15,20 +15,11 @@ public abstract class Component
 
     public transient GameObject gameObject = null;
 
-    public void start()
-    {
+    public void start() {}
 
-    }
+    public void update(double dt) {}
 
-    public void update(double dt)
-    {
-
-    }
-
-    public void render(Graphics g)
-    {
-
-    }
+    public void render(Graphics g) {}
 
     public void generateId()
     {
