@@ -11,6 +11,16 @@ public class AudioManager
      */
     private static final ArrayList<AudioClip> curPlayingSounds = new ArrayList<>();
 
+    public static void update()
+    {
+        for (AudioClip audioClip : curPlayingSounds) {
+            if (!audioClip.getClip().isActive() && audioClip.getClip().getMicrosecondPosition() != 0) {
+                audioClip.getClip().setMicrosecondPosition(0);
+                audioClip.getClip().stop();
+            }
+        }
+    }
+
     /**
      * @param audioClip being played.
      */
@@ -42,7 +52,6 @@ public class AudioManager
     {
         audioClip.getClip().stop();
         audioClip.getClip().close();
-        removeAudioClip(audioClip);
     }
 
     /**
@@ -61,7 +70,6 @@ public class AudioManager
             {
                 audioClip.getClip().stop();
                 audioClip.getClip().close();
-                removeAudioClip(audioClip);
                 break;
             }
         }
@@ -99,7 +107,8 @@ public class AudioManager
      */
     private static void indexAudioClip(AudioClip audioClip)
     {
-        curPlayingSounds.add(audioClip);
+        if (!curPlayingSounds.contains(audioClip))
+            curPlayingSounds.add(audioClip);
     }
 
     /**

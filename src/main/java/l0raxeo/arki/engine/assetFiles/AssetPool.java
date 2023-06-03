@@ -30,13 +30,13 @@ public class AssetPool
         return img;
     }
 
-    public static AudioClip getAudioClip(String name, String resource)
+    public static AudioClip getAudioClip(String name, String resource, float volumeAddends)
     {
         AudioClip audioClip;
 
         if (!loadedAudioClips.containsKey(resource))
         {
-            audioClip = new AudioClip(name, resource, 1);
+            audioClip = new AudioClip(name, resource, volumeAddends);
             loadedAudioClips.put(resource, audioClip);
         }
         else

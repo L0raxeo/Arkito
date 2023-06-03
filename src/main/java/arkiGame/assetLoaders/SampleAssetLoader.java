@@ -8,10 +8,13 @@ public class SampleAssetLoader implements AssetLoader
 {
 
     @Override
-    public void loadAssets(long minDurationMillis)
+    public AssetLoader loadAssets(long minDurationMillis)
     {
         LoadingScreen.load(minDurationMillis);
         AssetPool.getBufferedImage("assets/samples/textures/sample_texture.png");
+        AssetPool.getAudioClip("sample_audio", "assets/samples/audios/sample_audio.wav", 0);
+
+        return this;
     }
 
     @Override

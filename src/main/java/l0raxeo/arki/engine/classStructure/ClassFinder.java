@@ -3,11 +3,23 @@ package l0raxeo.arki.engine.classStructure;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.annotation.Annotation;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ClassFinder
 {
+
+    public static Class<?> findAnnotatedClass(Set<Class<?>> classes, Class<? extends Annotation> annotation)
+    {
+        for (Class<?> c : classes)
+        {
+            if (c.isAnnotationPresent(annotation))
+                return c;
+        }
+
+        return null;
+    }
 
     public static Set<Class<?>> findAllClassesUsingClassLoader(String packageName) {
         InputStream stream = ClassLoader.getSystemClassLoader()

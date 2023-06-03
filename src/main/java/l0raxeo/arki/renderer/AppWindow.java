@@ -1,22 +1,19 @@
 package l0raxeo.arki.renderer;
 
+import l0raxeo.arki.engine.audio.AudioManager;
 import l0raxeo.arki.engine.classStructure.ClassFinder;
 import l0raxeo.arki.engine.input.keyboard.KeyManager;
 import l0raxeo.arki.engine.input.mouse.MouseManager;
 import l0raxeo.arki.engine.mainApp.AppConfig;
-import l0raxeo.arki.engine.scenes.DefaultScene;
-import l0raxeo.arki.engine.scenes.Scene;
 import l0raxeo.arki.engine.loaders.LoadingScreen;
+import l0raxeo.arki.engine.scenes.SceneManager;
 import l0raxeo.arki.engine.ui.GuiLayer;
 import l0raxeo.arki.renderer.postRenderGraphics.GraphicsDraw;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.InvocationTargetException;
 import java.util.*;
-import java.util.List;
 
 public class AppWindow implements Runnable
 {
@@ -32,8 +29,6 @@ public class AppWindow implements Runnable
     private Thread thread;
     private boolean running = false;
 
-    private static final List<Scene> scenes = new ArrayList<>();
-    private static Scene currentScene = null;
     private Color backdrop;
     private KeyManager keyListener;
     private MouseManager mouseListener;
@@ -46,68 +41,6 @@ public class AppWindow implements Runnable
         WINDOW_HEIGHT = 768;
         IS_RESIZEABLE = false;
         WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
-    }
-
-    public static Scene getScene(Class<?> sceneClass)
-    {
-        for (Scene s : scenes)
-            if (s.getClass().equals(sceneClass))
-                return s;
-
-        return null;
-    }
-
-    public static void changeScene(Class<?> sceneClass)
-    {
-        if (sceneClass.isInstance(Scene.class))
-        {
-            assert false : "Class '" + sceneClass + "' is not a subclass of Scene";
-            return;
-        }
-
-        Scene targetScene = null;
-
-        if (currentScene != null && currentScene.getClass().equals(sceneClass))
-        {
-            assert false : "Cannot change to current scene '" + currentScene + "'";
-        }
-        else
-        {
-            boolean sceneExists = false;
-
-            for (Scene s : scenes)
-                if (s.getClass().equals(sceneClass))
-                {
-                    sceneExists = true;
-                    targetScene = s;
-                    break;
-                }
-
-            if (!sceneExists)
-            {
-                try {
-                    targetScene = (Scene) sceneClass.getDeclaredConstructor().newInstance();
-                    scenes.add(targetScene);
-                } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
-                         NoSuchMethodException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-
-            GuiLayer.getInstance().clear();
-
-            if (currentScene != null)
-                currentScene.onDestroy();
-            currentScene = targetScene;
-            currentScene.loadResources();
-            currentScene.init();
-            currentScene.start();
-        }
-    }
-
-    public static Scene getScene()
-    {
-        return currentScene;
     }
 
     @Override
@@ -128,23 +61,17 @@ public class AppWindow implements Runnable
         createWindowMouseListener();
         guiLayer = GuiLayer.getInstance();
         setVisible(true);
-        initializeScene();
+        SceneManager.initializeScene();
     }
 
     private void loadAppWindowConfiguration()
     {
-        Class<?> appConfig = Objects.requireNonNull(findAnnotatedClass(ClassFinder.findAllClassesUsingClassLoader("arkiGame"), AppConfig.class));
+        Class<?> appConfig = Objects.requireNonNull(ClassFinder.findAnnotatedClass(ClassFinder.findAllClassesUsingClassLoader("arkiGame"), AppConfig.class));
         APP_TITLE = appConfig.getAnnotation(AppConfig.class).windowTitle();
         WINDOW_WIDTH = appConfig.getAnnotation(AppConfig.class).windowWidth();
         WINDOW_HEIGHT = appConfig.getAnnotation(AppConfig.class).windowHeight();
         IS_RESIZEABLE = appConfig.getAnnotation(AppConfig.class).resizeable();
         WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
-    }
-
-    private void initializeScene()
-    {
-        Class<?> defaultSceneClass = Objects.requireNonNull(findAnnotatedClass(ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes"), DefaultScene.class));
-        changeScene(defaultSceneClass);
     }
 
     private void createJFrame()
@@ -182,17 +109,6 @@ public class AppWindow implements Runnable
         mouseListener = new MouseManager();
         canvas.addMouseListener(mouseListener);
         canvas.addMouseMotionListener(mouseListener);
-    }
-
-    private Class<?> findAnnotatedClass(Set<Class<?>> classes, Class<? extends Annotation> annotation)
-    {
-        for (Class<?> c : classes)
-        {
-            if (c.isAnnotationPresent(annotation))
-                return c;
-        }
-
-        return null;
     }
 
     private void loop()
@@ -239,7 +155,8 @@ public class AppWindow implements Runnable
     {
         mouseListener.update();
         keyListener.update();
-        currentScene.update(dt);
+        SceneManager.getActiveScene().update(dt);
+        AudioManager.update();
         updateWindowSize();
     }
 
@@ -264,7 +181,7 @@ public class AppWindow implements Runnable
         // render scene here
         g.setColor(backdrop);
         g.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-        currentScene.render(g);
+        SceneManager.getActiveScene().render(g);
         guiLayer.render(g);
         LoadingScreen.renderLoadingScreen(g);
         GraphicsDraw.render(g);

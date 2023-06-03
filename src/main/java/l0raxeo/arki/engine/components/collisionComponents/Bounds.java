@@ -3,6 +3,7 @@ package l0raxeo.arki.engine.components.collisionComponents;
 import l0raxeo.arki.engine.collision.Collision;
 import l0raxeo.arki.engine.components.Component;
 import l0raxeo.arki.engine.objects.GameObject;
+import l0raxeo.arki.engine.scenes.SceneManager;
 import l0raxeo.arki.renderer.AppWindow;
 import org.joml.Vector2f;
 import org.joml.Vector2i;
@@ -34,7 +35,7 @@ public abstract class Bounds extends Component
 
         Rectangle2D predictedBounds = new Rectangle((int) (bounds.x + velocity.x), (int) (bounds.y + velocity.y), bounds.width, bounds.height);
 
-        for (GameObject go : AppWindow.getScene().getGameObjectsWithComponent(Bounds.class))
+        for (GameObject go : SceneManager.getActiveScene().getGameObjectsWithComponent(Bounds.class))
         {
             if (go.equals(this.gameObject))
                 continue;

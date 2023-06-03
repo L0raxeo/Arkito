@@ -112,7 +112,7 @@ public class MouseManager implements MouseListener, MouseMotionListener
 
     // Getters
 
-    public static int getMouseX()
+    public static int getScreenMouseX()
     {
         return xMouse;
     }
@@ -120,14 +120,19 @@ public class MouseManager implements MouseListener, MouseMotionListener
     /**
      * @return y-coordinate is in graph coordinates
      */
-    public static int getMouseY()
+    public static int getScreenMouseY()
     {
         return AppWindow.WINDOW_HEIGHT - yMouse;
     }
 
+    public static int getGraphMouseX()
+    {
+        return getScreenMouseX();
+    }
+
     public static int getGraphMouseY()
     {
-        return AppWindow.WINDOW_HEIGHT - getMouseY();
+        return AppWindow.WINDOW_HEIGHT - getScreenMouseY();
     }
 
     public static int getMouseMoveX()
@@ -155,12 +160,12 @@ public class MouseManager implements MouseListener, MouseMotionListener
      */
     public static Vector2i getMousePosition()
     {
-        return new Vector2i(getMouseX(), getMouseY());
+        return new Vector2i(getScreenMouseX(), getScreenMouseY());
     }
 
     public static Vector2i getMouseScreenPosition()
     {
-        return new Vector2i(getMouseX(), getGraphMouseY());
+        return new Vector2i(getScreenMouseX(), getGraphMouseY());
     }
 
     // Implemented methods
@@ -229,7 +234,7 @@ public class MouseManager implements MouseListener, MouseMotionListener
     public void mouseMoved(MouseEvent e)
     {
         GuiLayer.getInstance().onMouseMove(
-                new Vector2i(getMouseX(), getGraphMouseY()));
+                new Vector2i(getScreenMouseX(), getGraphMouseY()));
 
         xMove = -(xMouse - e.getX());
         yMove = yMouse - e.getY();

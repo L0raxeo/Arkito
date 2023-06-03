@@ -1,7 +1,7 @@
 package l0raxeo.arki.engine.objects;
 
 import l0raxeo.arki.renderer.AppWindow;
-import l0raxeo.arki.renderer.gameRenderingComponents.Camera;
+import l0raxeo.arki.engine.scenes.Camera;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.joml.Vector3i;
@@ -43,7 +43,7 @@ public class Transform
         return new Vector2f(position.x + Camera.xOffset(), position.y + Camera.yOffset());
     }
 
-    public Vector2f getCenterPosition()
+    public Vector2f getScreenCenterPosition()
     {
         return getScreenPosition().add(scale.x / 2, scale.y / 2);
     }

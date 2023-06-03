@@ -1,59 +1,34 @@
 package arkiGame.scenes;
 
 import arkiGame.assetLoaders.SampleAssetLoader;
-import arkiGame.components.SampleComponent;
-import l0raxeo.arki.engine.components.collisionComponents.BoxBounds;
-import l0raxeo.arki.engine.components.collisionComponents.RigidBody;
-import l0raxeo.arki.engine.components.physicsComponents.Physics;
-import l0raxeo.arki.engine.components.renderComponents.ImageTexture;
-import l0raxeo.arki.engine.components.renderComponents.RectangleRenderer;
-import l0raxeo.arki.engine.assetFiles.AssetPool;
-import l0raxeo.arki.engine.objects.prefabs.Prefabs;
+import arkiGame.prefabs.SamplePrefab2;
+import l0raxeo.arki.engine.eventSystem.EventTrigger;
+import l0raxeo.arki.engine.input.keyboard.KeyManager;
+import arkiGame.prefabs.SamplePrefab1;
 import l0raxeo.arki.engine.scenes.DefaultScene;
 import l0raxeo.arki.engine.scenes.Scene;
-import org.joml.Vector2f;
-import org.joml.Vector2i;
-import org.joml.Vector3f;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 @DefaultScene()
 public class SampleScene extends Scene
 {
 
-    private SampleAssetLoader sampleAssetLoader;
+    private final SampleAssetLoader sampleAssetLoader = new SampleAssetLoader();
 
     @Override
     public void loadResources()
     {
         setBackdrop(Color.DARK_GRAY);
-        sampleAssetLoader = new SampleAssetLoader();
         sampleAssetLoader.loadAssets(1000);
     }
 
     @Override
     public void start()
     {
-        addGameObject(Prefabs.generate(
-                "sample_object",
-                new Vector3f(50, 500, 1),
-                new Vector2f(32, 32),
-                45,
-                new ImageTexture(AssetPool.getBufferedImage("assets/samples/textures/sample_texture.png"), new Vector2i(16, 16)),
-                new RigidBody(1),
-                new Physics(),
-                new BoxBounds(),
-                new SampleComponent()
-        ));
-
-        addGameObject(Prefabs.generate(
-                "sample_platform",
-                new Vector3f(16, 100, 1),
-                new Vector2f(300, 32),
-                new RectangleRenderer(Color.WHITE, true),
-                new RigidBody(1),
-                new BoxBounds()
-        ));
+        addGameObject(SamplePrefab1.generate());
+        addGameObject(SamplePrefab2.generate());
     }
 
     @Override

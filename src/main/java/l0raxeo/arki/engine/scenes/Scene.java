@@ -16,13 +16,9 @@ public abstract class Scene
     protected List<GameObject> gameObjects = new ArrayList<>();
     protected Color backdrop = new Color(0, 0, 0, 0);
 
-    public Scene() {
+    public Scene() {}
 
-    }
-
-    public void init() {
-
-    }
+    public void init() {}
 
     public void start() {
         for (GameObject go : gameObjects) {
@@ -79,8 +75,8 @@ public abstract class Scene
         return result;
     }
 
-    public abstract void update(double dt);
-    public abstract void render(Graphics g);
+    public void update(double dt) {}
+    public void render(Graphics g) {}
 
     protected void updateSceneGameObjects(double dt)
     {
