@@ -32,7 +32,6 @@ public class AppWindow implements Runnable
     private Color backdrop;
     private KeyManager keyListener;
     private MouseManager mouseListener;
-    private GuiLayer guiLayer;
 
     private AppWindow()
     {
@@ -59,7 +58,6 @@ public class AppWindow implements Runnable
         combineJFrameAndCanvas();
         createWindowKeyListener();
         createWindowMouseListener();
-        guiLayer = GuiLayer.getInstance();
         setVisible(true);
         SceneManager.initializeScene();
     }
@@ -151,6 +149,13 @@ public class AppWindow implements Runnable
         }
     }
 
+    private void updateWindowSize()
+    {
+        WINDOW_WIDTH = getFrame().getWidth();
+        WINDOW_HEIGHT = getFrame().getHeight();
+        WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
+    }
+
     private void update(double dt)
     {
         mouseListener.update();
@@ -158,13 +163,6 @@ public class AppWindow implements Runnable
         SceneManager.getActiveScene().update(dt);
         AudioManager.update();
         updateWindowSize();
-    }
-
-    private void updateWindowSize()
-    {
-        WINDOW_WIDTH = getFrame().getWidth();
-        WINDOW_HEIGHT = getFrame().getHeight();
-        WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
     }
 
     private void render()
@@ -182,7 +180,7 @@ public class AppWindow implements Runnable
         g.setColor(backdrop);
         g.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         SceneManager.getActiveScene().render(g);
-        guiLayer.render(g);
+        GuiLayer.render(g);
         LoadingScreen.renderLoadingScreen(g);
         GraphicsDraw.render(g);
         // end drawing

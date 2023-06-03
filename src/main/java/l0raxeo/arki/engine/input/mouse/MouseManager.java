@@ -199,7 +199,7 @@ public class MouseManager implements MouseListener, MouseMotionListener
             if (mBtn.getBtnCode() == e.getButton())
             {
                 mBtn.queueState(MBtnState.RELEASED);
-                GuiLayer.getInstance().onMouseRelease();
+                GuiLayer.onMouseRelease();
             }
         }
 
@@ -233,7 +233,7 @@ public class MouseManager implements MouseListener, MouseMotionListener
     @Override
     public void mouseMoved(MouseEvent e)
     {
-        GuiLayer.getInstance().onMouseMove(
+        GuiLayer.onMouseMove(
                 new Vector2i(getScreenMouseX(), getGraphMouseY()));
 
         xMove = -(xMouse - e.getX());

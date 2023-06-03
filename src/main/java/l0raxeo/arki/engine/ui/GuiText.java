@@ -24,4 +24,19 @@ public class GuiText
         g.drawString(text, x, y);
     }
 
+    public static void drawString(Graphics g, String text, int xScreen, int yScreen, boolean center, Color color, Font font)
+    {
+        g.setColor(color);
+        g.setFont(font);
+
+        if (center)
+        {
+            FontMetrics fm = g.getFontMetrics(font);
+            xScreen = xScreen - fm.stringWidth(text) / 2;
+            yScreen = (yScreen - fm.getHeight() / 2) + fm.getAscent();
+        }
+
+        g.drawString(text, xScreen, yScreen);
+    }
+
 }

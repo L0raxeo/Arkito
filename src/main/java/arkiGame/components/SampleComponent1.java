@@ -2,18 +2,12 @@ package arkiGame.components;
 
 import l0raxeo.arki.engine.components.Component;
 import l0raxeo.arki.engine.components.collisionComponents.RigidBody;
-import l0raxeo.arki.engine.eventSystem.EventHandler;
 import l0raxeo.arki.engine.input.mouse.MouseManager;
 import l0raxeo.arki.engine.scenes.Camera;
 import org.joml.Vector2f;
 
 public class SampleComponent1 extends Component
 {
-    @Override
-    public void start()
-    {
-        EventHandler.getEventTrigger("sampleEvent").subscribe(this, "onClick", Object.class);
-    }
 
     @Override
     public void update(double dt) {

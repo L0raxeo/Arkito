@@ -62,7 +62,7 @@ public class SceneManager
                 }
             }
 
-            GuiLayer.getInstance().clear();
+            GuiLayer.clear();
 
             if (currentScene != null)
                 currentScene.onDestroy();

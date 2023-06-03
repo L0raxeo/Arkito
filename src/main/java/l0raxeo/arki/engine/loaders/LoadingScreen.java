@@ -26,7 +26,8 @@ public class LoadingScreen
             GuiText.drawString(
                     g,
                     "Loading...",
-                    new Vector2i(AppWindow.WINDOW_WIDTH / 2, AppWindow.WINDOW_HEIGHT / 2),
+                    AppWindow.WINDOW_WIDTH / 2,
+                    AppWindow.WINDOW_HEIGHT / 2,
                     true,
                     Color.WHITE,
                     AssetPool.getFont("assets/fonts/default_font.ttf", 24)

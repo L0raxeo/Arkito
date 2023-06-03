@@ -1,4 +1,4 @@
-package l0raxeo.arki.renderer.gameRenderingComponents;
+package l0raxeo.arki.engine.animations;
 
 import java.awt.image.BufferedImage;
 

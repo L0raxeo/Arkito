@@ -6,73 +6,60 @@ import org.joml.Vector2i;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
+import java.util.Iterator;
 import java.util.List;
 
 public class GuiLayer
 {
 
-    private final List<GuiComponent> guiComponents = new ArrayList<>();
-    private static GuiLayer instance = null;
+    public static final List<GuiComponent> guiComponents = new ArrayList<>();
 
-    private GuiComponent selectedComponent = null;
+    private static GuiComponent selectedComponent = null;
 
     private GuiLayer() {}
 
-    public void onMouseMove(Vector2i mousePos)
+    public static void onMouseMove(Vector2i mousePos)
     {
-        for (GuiComponent c : getGuiComponents())
+        for (GuiComponent c : guiComponents)
         {
             c.hovering = c.bounds.contains(mousePos.x, mousePos.y);
             c.update();
         }
     }
 
-    public void onMouseRelease()
+    public static void onMouseRelease()
     {
-        try
-        {
-            for (GuiComponent c : getGuiComponents())
-                if (c.hovering) c.onClick();
-        }
-        catch (ConcurrentModificationException ignore) {}
+        for (GuiComponent c : guiComponents)
+            if (c.hovering) c.onClick();
     }
 
-    public void render(Graphics g)
+    public static void render(Graphics g)
     {
-        try
-        {
-            for (GuiComponent c : getGuiComponents())
-                c.render(g);
-        }
-        catch (ConcurrentModificationException ignore) {}
+        for (GuiComponent c : guiComponents)
+            c.render(g);
     }
 
     /**
      * Clears GUI Layer of all contents {@link GuiComponent}
      */
-    public void clear()
+    public static void clear()
     {
         guiComponents.clear();
     }
 
-    public void addGuiComponent(GuiComponent c)
+    public static void addGuiComponent(GuiComponent c)
     {
-        this.guiComponents.add(c);
+        guiComponents.add(c);
     }
 
-    public void removeGuiComponent(GuiComponent c)
+    public static void removeGuiComponent(GuiComponent c)
     {
-        this.guiComponents.remove(c);
+        guiComponents.remove(c);
     }
 
-    public List<GuiComponent> getGuiComponents()
+    public static GuiComponent getGuiComponent(String name)
     {
-        return this.guiComponents;
-    }
-
-    public GuiComponent getGuiComponent(String name)
-    {
-        for (GuiComponent c : getGuiComponents())
+        for (GuiComponent c : guiComponents)
         {
             if (c.name.equals(name))
                 return c;
@@ -81,15 +68,7 @@ public class GuiLayer
         return null;
     }
 
-    public static GuiLayer getInstance()
-    {
-        if (instance == null)
-            instance = new GuiLayer();
-
-        return instance;
-    }
-
-    public void selectComponent(GuiComponent component)
+    public static void selectComponent(GuiComponent component)
     {
         if (selectedComponent != null)
             selectedComponent.selected = false;
@@ -100,7 +79,7 @@ public class GuiLayer
         selectedComponent = component;
     }
 
-    public GuiComponent getSelectedComponent()
+    public static GuiComponent getSelectedComponent()
     {
         return selectedComponent;
     }

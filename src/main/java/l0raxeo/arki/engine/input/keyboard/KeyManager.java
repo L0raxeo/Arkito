@@ -157,7 +157,7 @@ public final class KeyManager implements KeyListener
     @Override
     public void keyPressed(KeyEvent e)
     {
-        for (GuiComponent c : GuiLayer.getInstance().getGuiComponents())
+        for (GuiComponent c : GuiLayer.guiComponents)
             if (c instanceof GuiKeyListener)
                 ((GuiKeyListener) c).keyPress(e);
 

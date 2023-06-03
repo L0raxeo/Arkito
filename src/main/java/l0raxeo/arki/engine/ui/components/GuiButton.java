@@ -73,7 +73,7 @@ public class GuiButton extends GuiComponent
     public void onClick()
     {
         clicker.onClick();
-        GuiLayer.getInstance().selectComponent(null);
+        GuiLayer.selectComponent(null);
     }
 
 }

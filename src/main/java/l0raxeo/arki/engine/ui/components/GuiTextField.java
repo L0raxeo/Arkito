@@ -49,7 +49,7 @@ public class GuiTextField extends GuiKeyListener
     public void onClick()
     {
         selected = !selected;
-        GuiLayer.getInstance().selectComponent(this);
+        GuiLayer.selectComponent(this);
     }
 
     public void keyPress(KeyEvent e)
