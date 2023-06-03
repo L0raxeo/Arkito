@@ -4,31 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="restructuring">
-      <change afterPath="$PROJECT_DIR$/assets/samples/audios/sample_audio.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/prefabs/SamplePrefab1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/prefabs/SamplePrefab2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/eventSystem/EventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/eventSystem/EventTrigger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/samples/textures/floor_tile_0.png" beforeDir="false" />
+    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="Arkito">
       <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/assetLoaders/SampleAssetLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/assetLoaders/SampleAssetLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/assetFiles/AssetPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/assetFiles/AssetPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioClip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioClip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/classStructure/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/classStructure/ClassFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/Bounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/Bounds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/keyboard/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/keyboard/KeyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/mouse/MouseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/input/mouse/MouseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/loaders/AssetLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/loaders/AssetLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/Transform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/prefabs/Prefabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/objects/prefabs/Prefabs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/loaders/LoadingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/loaders/LoadingScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/GuiLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/GuiLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/GuiText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/GuiText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiImageButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiImageButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiTextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRenderingComponents/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/gameRenderingComponents/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/animations/Animation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +114,7 @@
       <workItem from="1685478409822" duration="1745000" />
       <workItem from="1685569203839" duration="2606000" />
       <workItem from="1685655043411" duration="2828000" />
-      <workItem from="1685737426717" duration="21594000" />
+      <workItem from="1685737426717" duration="24461000" />
     </task>
     <task id="LOCAL-00001" summary="audiomanager">
       <created>1685314596250</created>
@@ -182,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685641196340</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Arkito">
+      <created>1685814026147</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685814026147</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +203,8 @@
     <MESSAGE value="final stuff" />
     <MESSAGE value="fixed loading screen issue" />
     <MESSAGE value="cleaning up sample project" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning up sample project" />
+    <MESSAGE value="Final Version of Arkito" />
+    <MESSAGE value="Arkito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arkito" />
   </component>
 </project>
