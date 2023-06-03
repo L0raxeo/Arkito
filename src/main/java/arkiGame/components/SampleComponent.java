@@ -6,7 +6,7 @@ import l0raxeo.arki.engine.input.mouse.MouseManager;
 import l0raxeo.arki.engine.scenes.Camera;
 import org.joml.Vector2f;
 
-public class SampleComponent1 extends Component
+public class SampleComponent extends Component
 {
 
     @Override

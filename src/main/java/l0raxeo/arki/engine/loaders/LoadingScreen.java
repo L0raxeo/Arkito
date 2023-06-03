@@ -30,7 +30,7 @@ public class LoadingScreen
                     AppWindow.WINDOW_HEIGHT / 2,
                     true,
                     Color.WHITE,
-                    AssetPool.getFont("assets/fonts/default_font.ttf", 24)
+                    AssetPool.getFont("assets/samples/fonts/default_font.ttf", 24)
             );
 
             isLoading = System.currentTimeMillis() < minEndTime;

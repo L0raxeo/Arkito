@@ -1,6 +1,6 @@
 package arkiGame.prefabs;
 
-import arkiGame.components.SampleComponent1;
+import arkiGame.components.SampleComponent;
 import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.components.collisionComponents.BoxBounds;
 import l0raxeo.arki.engine.components.collisionComponents.RigidBody;
@@ -26,7 +26,7 @@ public class SamplePrefab1
                 new RigidBody(1),
                 new Physics(),
                 new BoxBounds(),
-                new SampleComponent1()
+                new SampleComponent()
         );
     }
 
