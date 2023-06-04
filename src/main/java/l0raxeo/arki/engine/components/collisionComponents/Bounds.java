@@ -2,11 +2,9 @@ package l0raxeo.arki.engine.components.collisionComponents;
 
 import l0raxeo.arki.engine.collision.Collision;
 import l0raxeo.arki.engine.components.Component;
-import l0raxeo.arki.engine.objects.GameObject;
+import l0raxeo.arki.engine.gameObjects.GameObject;
 import l0raxeo.arki.engine.scenes.SceneManager;
-import l0raxeo.arki.renderer.AppWindow;
 import org.joml.Vector2f;
-import org.joml.Vector2i;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;

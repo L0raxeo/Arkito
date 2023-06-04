@@ -2,7 +2,7 @@ package l0raxeo.arki.engine.scenes;
 
 
 import l0raxeo.arki.engine.components.Component;
-import l0raxeo.arki.engine.objects.GameObject;
+import l0raxeo.arki.engine.gameObjects.GameObject;
 import l0raxeo.arki.renderer.AppWindow;
 
 import java.awt.*;

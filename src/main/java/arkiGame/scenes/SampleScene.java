@@ -41,8 +41,7 @@ public class SampleScene extends Scene
     public void render(Graphics g)
     {
         renderSceneGameObjects(g);
-
-        GuiText.drawString(g, "press any mouse button to jump", AppWindow.WINDOW_WIDTH / 2, 100, true, Color.WHITE, AssetPool.getFont("assets/samples/fonts/default_font.ttf", 16));
+        GuiText.drawString(g, "press any mouse button to jump", AppWindow.WINDOW_WIDTH / 2, 100, true, Color.WHITE, AssetPool.getFont("sampleFont16"));
     }
 
     @Override

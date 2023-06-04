@@ -1,4 +1,4 @@
-package l0raxeo.arki.engine.objects;
+package l0raxeo.arki.engine.gameObjects;
 
 import l0raxeo.arki.renderer.AppWindow;
 import l0raxeo.arki.engine.scenes.Camera;

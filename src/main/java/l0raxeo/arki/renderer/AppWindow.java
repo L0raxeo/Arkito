@@ -135,7 +135,8 @@ public class AppWindow implements Runnable
             while (delta >= 1)
             {
                 ticks++;
-                update(delta);
+                if (!LoadingScreen.isLoading)
+                    update(delta);
                 /*
                 caps the FPS to 60 but reduces lag spikes
                 move render & frames outside of while loop to increase FPS
@@ -188,8 +189,8 @@ public class AppWindow implements Runnable
         g.fillRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         SceneManager.getActiveScene().render(g);
         GuiLayer.render(g);
-        LoadingScreen.renderLoadingScreen(g);
         GraphicsDraw.render(g);
+        LoadingScreen.renderLoadingScreen(g);
         // end drawing
         bs.show();
         g.dispose();

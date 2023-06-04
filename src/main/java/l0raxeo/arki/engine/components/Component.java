@@ -1,7 +1,7 @@
 package l0raxeo.arki.engine.components;
 
 import l0raxeo.arki.engine.collision.Collision;
-import l0raxeo.arki.engine.objects.GameObject;
+import l0raxeo.arki.engine.gameObjects.GameObject;
 
 import java.awt.*;
 

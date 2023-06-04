@@ -10,22 +10,32 @@ import java.util.Map;
 public class AssetPool
 {
 
-    //          resource, File
-    private static final Map<String, Font> loadedFonts = new HashMap<>();
-    private static final Map<String, BufferedImage> loadedBufferedImages = new HashMap<>();
+    // path, resource
     private static final Map<String, AudioClip> loadedAudioClips = new HashMap<>();
 
-    public static BufferedImage getBufferedImage(String resource)
+    private static final Map<String, Asset<Font>> loadedFonts = new HashMap<>();
+    private static final Map<String, Asset<BufferedImage>> loadedBufferedImages = new HashMap<>();
+    private static final Map<String, Asset<AudioClip>> loadedAudioClipsT = new HashMap<>();
+
+    public static BufferedImage getBufferedImage(String referenceName)
+    {
+        if (loadedBufferedImages.containsKey(referenceName))
+            return loadedBufferedImages.get(referenceName).getResource();
+
+        return null;
+    }
+
+    public static BufferedImage getBufferedImage(String referenceName, String path)
     {
         BufferedImage img;
 
-        if (!loadedFonts.containsKey(resource))
+        if (!loadedBufferedImages.containsKey(referenceName))
         {
-            img = FileLoader.loadImage(resource);
-            loadedBufferedImages.put(resource, img);
+            img = FileLoader.loadImage(path);
+            loadedBufferedImages.put(referenceName, new Asset<>(path, img));
         }
         else
-            img = loadedBufferedImages.get(resource);
+            img = loadedBufferedImages.get(referenceName).getResource();
 
         return img;
     }
@@ -45,31 +55,23 @@ public class AssetPool
         return audioClip;
     }
 
-    public static Font getFont(String resource, int size)
+    public static Font getFont(String referenceName)
     {
-        Font font = null;
+        if (loadedFonts.containsKey(referenceName))
+            return loadedFonts.get(referenceName).getResource();
 
-        if (!loadedFonts.containsKey(resource))
+        return null;
+    }
+
+    public static void indexFont(String referenceName, String path, int size)
+    {
+        boolean hasReference = loadedFonts.containsKey(referenceName);
+        boolean differentSize = hasReference && loadedFonts.get(referenceName).getResource().getSize() != size;
+        if (!hasReference || differentSize)
         {
-            font = FileLoader.loadFont(resource, size);
-            loadedFonts.put(resource, font);
+            Font font = FileLoader.loadFont(path, size);
+            loadedFonts.put(referenceName, new Asset<>(path, font));
         }
-        else
-        {
-            if (loadedFonts.get(resource).getSize() != size)
-            {
-                font = FileLoader.loadFont(resource, size);
-                loadedFonts.put(resource, font);
-            }
-
-            for (Map.Entry<String, Font> fontSet : loadedFonts.entrySet())
-            {
-                if (fontSet.getKey().equals(resource) && fontSet.getValue().getSize() == size)
-                    return fontSet.getValue();
-            }
-        }
-
-        return font;
     }
 
     public static void unloadAllBufferedImages()

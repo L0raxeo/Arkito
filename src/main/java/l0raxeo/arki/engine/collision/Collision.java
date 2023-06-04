@@ -1,7 +1,7 @@
 package l0raxeo.arki.engine.collision;
 
-import l0raxeo.arki.engine.objects.GameObject;
-import l0raxeo.arki.engine.objects.Transform;
+import l0raxeo.arki.engine.gameObjects.GameObject;
+import l0raxeo.arki.engine.gameObjects.Transform;
 
 import static l0raxeo.arki.engine.collision.CollisionType.*;
 

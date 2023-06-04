@@ -3,8 +3,8 @@ package arkiGame.prefabs;
 import l0raxeo.arki.engine.components.collisionComponents.BoxBounds;
 import l0raxeo.arki.engine.components.collisionComponents.RigidBody;
 import l0raxeo.arki.engine.components.renderComponents.RectangleRenderer;
-import l0raxeo.arki.engine.objects.GameObject;
-import l0raxeo.arki.engine.objects.prefabs.Prefabs;
+import l0raxeo.arki.engine.gameObjects.GameObject;
+import l0raxeo.arki.engine.gameObjects.prefabs.Prefabs;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 

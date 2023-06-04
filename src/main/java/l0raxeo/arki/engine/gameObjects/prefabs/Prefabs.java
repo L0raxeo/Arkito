@@ -1,8 +1,8 @@
-package l0raxeo.arki.engine.objects.prefabs;
+package l0raxeo.arki.engine.gameObjects.prefabs;
 
 import l0raxeo.arki.engine.components.Component;
-import l0raxeo.arki.engine.objects.GameObject;
-import l0raxeo.arki.engine.objects.Transform;
+import l0raxeo.arki.engine.gameObjects.GameObject;
+import l0raxeo.arki.engine.gameObjects.Transform;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 

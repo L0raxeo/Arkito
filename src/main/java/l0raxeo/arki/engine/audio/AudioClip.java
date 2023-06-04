@@ -4,7 +4,6 @@ import l0raxeo.arki.engine.assetFiles.FileLoader;
 
 import javax.sound.sampled.*;
 import java.io.IOException;
-import java.io.InputStream;
 
 import static javax.sound.sampled.FloatControl.Type.MASTER_GAIN;
 
