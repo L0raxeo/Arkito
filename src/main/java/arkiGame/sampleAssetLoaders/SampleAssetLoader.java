@@ -1,9 +1,8 @@
-package arkiGame.assetLoaders;
+package arkiGame.sampleAssetLoaders;
 
 import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.loaders.AssetLoader;
 import l0raxeo.arki.engine.loaders.LoadingScreen;
-import l0raxeo.arki.engine.loaders.LoadingScreenRenderer;
 import l0raxeo.arki.engine.ui.GuiText;
 import l0raxeo.arki.renderer.AppWindow;
 
@@ -17,7 +16,7 @@ public class SampleAssetLoader implements AssetLoader
     {
         createLoadingScreen(minDurationMillis);
 
-        AssetPool.getBufferedImage("sampleTexture", "assets/samples/textures/sample_texture.png");
+        AssetPool.indexBufferedImage("sampleTexture", "assets/samples/textures/sample_texture.png");
         AssetPool.getAudioClip("sample_audio", "assets/samples/audios/sample_audio.wav", 0);
         AssetPool.indexFont("sampleFont16", "assets/samples/fonts/default_font.ttf", 16);
         AssetPool.indexFont("sampleFont24", "assets/samples/fonts/default_font.ttf", 24);

@@ -1,6 +1,6 @@
-package arkiGame.prefabs;
+package arkiGame.samplePrefabs;
 
-import arkiGame.components.SampleComponent;
+import arkiGame.sampleComponents.SampleComponent;
 import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.components.collisionComponents.BoxBounds;
 import l0raxeo.arki.engine.components.collisionComponents.RigidBody;

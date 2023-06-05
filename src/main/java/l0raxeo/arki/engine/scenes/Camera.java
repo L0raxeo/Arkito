@@ -32,7 +32,6 @@ public class Camera
     public static float getDegFromOriginToTarget(int xOriginScreenPosition, int yOriginScreenPosition, int xTargetScreenPosition, int yTargetScreenPosition)
     {
         float theta = 0;
-        yOriginScreenPosition = AppWindow.WINDOW_HEIGHT - yOriginScreenPosition;
 
         if (xTargetScreenPosition < xOriginScreenPosition && yTargetScreenPosition < yOriginScreenPosition)
             theta = (float) (Math.toDegrees(Math.atan((float) (yTargetScreenPosition - yOriginScreenPosition) / (xTargetScreenPosition - xOriginScreenPosition))) + 180);
@@ -49,7 +48,7 @@ public class Camera
         else
             theta = (float) Math.toDegrees(Math.acos((xTargetScreenPosition - xOriginScreenPosition) / (Math.sqrt(Math.pow(xTargetScreenPosition - xOriginScreenPosition, 2) + Math.pow(yTargetScreenPosition - yOriginScreenPosition, 2)))));
 
-        return -theta;
+        return theta;
     }
 
     public static Vector2i screenToWorld(Vector2i scrPos)

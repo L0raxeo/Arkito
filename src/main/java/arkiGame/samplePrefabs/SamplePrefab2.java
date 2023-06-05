@@ -1,4 +1,4 @@
-package arkiGame.prefabs;
+package arkiGame.samplePrefabs;
 
 import l0raxeo.arki.engine.components.collisionComponents.BoxBounds;
 import l0raxeo.arki.engine.components.collisionComponents.RigidBody;

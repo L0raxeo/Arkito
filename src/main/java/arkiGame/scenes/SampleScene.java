@@ -1,9 +1,9 @@
 package arkiGame.scenes;
 
-import arkiGame.assetLoaders.SampleAssetLoader;
-import arkiGame.prefabs.SamplePrefab2;
+import arkiGame.sampleAssetLoaders.SampleAssetLoader;
+import arkiGame.samplePrefabs.SamplePrefab2;
 import l0raxeo.arki.engine.assetFiles.AssetPool;
-import arkiGame.prefabs.SamplePrefab1;
+import arkiGame.samplePrefabs.SamplePrefab1;
 import l0raxeo.arki.engine.scenes.DefaultScene;
 import l0raxeo.arki.engine.scenes.Scene;
 import l0raxeo.arki.engine.ui.GuiText;

@@ -120,7 +120,7 @@ public class MouseManager implements MouseListener, MouseMotionListener
     /**
      * @return y-coordinate is in graph coordinates
      */
-    public static int getScreenMouseY()
+    public static int getGraphMouseY()
     {
         return AppWindow.WINDOW_HEIGHT - yMouse;
     }
@@ -130,27 +130,27 @@ public class MouseManager implements MouseListener, MouseMotionListener
         return getScreenMouseX();
     }
 
-    public static int getGraphMouseY()
+    public static int getScreenMouseY()
     {
-        return AppWindow.WINDOW_HEIGHT - getScreenMouseY();
+        return AppWindow.WINDOW_HEIGHT - getGraphMouseY();
     }
 
-    public static int getMouseMoveX()
+    public static int getMouseMoveGraphX()
     {
         return xMove;
     }
 
-    public static int getMouseMoveY()
+    public static int getMouseMoveGraphY()
     {
         return yMove;
     }
 
-    public static int getMouseDraggedX()
+    public static int getMouseDraggedGraphX()
     {
         return xDragged;
     }
 
-    public static int getMouseDraggedY()
+    public static int getMouseDraggedGraphY()
     {
         return yDragged;
     }
@@ -160,12 +160,12 @@ public class MouseManager implements MouseListener, MouseMotionListener
      */
     public static Vector2i getMousePosition()
     {
-        return new Vector2i(getScreenMouseX(), getScreenMouseY());
+        return new Vector2i(getScreenMouseX(), getGraphMouseY());
     }
 
     public static Vector2i getMouseScreenPosition()
     {
-        return new Vector2i(getScreenMouseX(), getGraphMouseY());
+        return new Vector2i(getScreenMouseX(), getScreenMouseY());
     }
 
     // Implemented methods
@@ -234,7 +234,7 @@ public class MouseManager implements MouseListener, MouseMotionListener
     public void mouseMoved(MouseEvent e)
     {
         GuiLayer.onMouseMove(
-                new Vector2i(getScreenMouseX(), getGraphMouseY()));
+                new Vector2i(getScreenMouseX(), getScreenMouseY()));
 
         xMove = -(xMouse - e.getX());
         yMove = yMouse - e.getY();

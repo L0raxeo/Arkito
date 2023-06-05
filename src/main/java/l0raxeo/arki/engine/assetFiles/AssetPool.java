@@ -25,7 +25,7 @@ public class AssetPool
         return null;
     }
 
-    public static BufferedImage getBufferedImage(String referenceName, String path)
+    public static void indexBufferedImage(String referenceName, String path)
     {
         BufferedImage img;
 
@@ -34,10 +34,7 @@ public class AssetPool
             img = FileLoader.loadImage(path);
             loadedBufferedImages.put(referenceName, new Asset<>(path, img));
         }
-        else
-            img = loadedBufferedImages.get(referenceName).getResource();
 
-        return img;
     }
 
     public static AudioClip getAudioClip(String name, String resource, float volumeAddends)

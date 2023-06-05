@@ -1,4 +1,4 @@
-package arkiGame.components;
+package arkiGame.sampleComponents;
 
 import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.audio.AudioManager;
