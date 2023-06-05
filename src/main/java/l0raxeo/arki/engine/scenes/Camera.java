@@ -9,6 +9,8 @@ public class Camera
     private static int xOffset;
     private static int yOffset;
 
+    private Camera() {}
+
     public static void reset()
     {
         xOffset = 0;
@@ -18,13 +20,13 @@ public class Camera
     /**
      * @param position world position
      */
-    public static void setPosition(Vector2i position)
+    public static void setWorldPosition(Vector2i position)
     {
         xOffset = -position.x;
         yOffset = position.y;
     }
 
-    public static Vector2i getPosition()
+    public static Vector2i getWorldPosition()
     {
         return new Vector2i(-xOffset(), yOffset());
     }
@@ -67,6 +69,11 @@ public class Camera
         yOffset += vel.y;
     }
 
+    public static void moveWorldCoords(int xVel, int yVel)
+    {
+        xOffset -= xVel;
+        yOffset += yVel;
+    }
 
     public static int xOffset()
     {

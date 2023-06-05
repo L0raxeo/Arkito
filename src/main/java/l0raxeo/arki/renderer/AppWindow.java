@@ -60,7 +60,7 @@ public class AppWindow implements Runnable
         createWindowKeyListener();
         createWindowMouseListener();
         setVisible(true);
-        SceneManager.initializeScene();
+        SceneManager.initializeDefaultScene();
     }
 
     private void loadAppWindowConfiguration()

@@ -13,14 +13,14 @@ import java.util.Set;
 public class SceneManager
 {
 
-    private static final List<Scene> scenes = new ArrayList<>();
-    private static Scene currentScene = null;
+    private static final List<Scene> instantiatedScenes = new ArrayList<>();
+    private static Scene activeScene = null;
 
     private SceneManager() {}
 
     public static Scene getScene(Class<?> sceneClass)
     {
-        for (Scene s : scenes)
+        for (Scene s : instantiatedScenes)
             if (s.getClass().equals(sceneClass))
                 return s;
 
@@ -37,15 +37,15 @@ public class SceneManager
 
         Scene targetScene = null;
 
-        if (currentScene != null && currentScene.getClass().equals(sceneClass))
+        if (activeScene != null && activeScene.getClass().equals(sceneClass))
         {
-            assert false : "Cannot change to current scene '" + currentScene + "'";
+            assert false : "Cannot change to current scene '" + activeScene + "'";
         }
         else
         {
             boolean sceneExists = false;
 
-            for (Scene s : scenes)
+            for (Scene s : instantiatedScenes)
                 if (s.getClass().equals(sceneClass))
                 {
                     sceneExists = true;
@@ -57,7 +57,7 @@ public class SceneManager
             {
                 try {
                     targetScene = (Scene) sceneClass.getDeclaredConstructor().newInstance();
-                    scenes.add(targetScene);
+                    instantiatedScenes.add(targetScene);
                 } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
                          NoSuchMethodException e) {
                     throw new RuntimeException(e);
@@ -66,16 +66,16 @@ public class SceneManager
 
             GuiLayer.clear();
 
-            if (currentScene != null)
-                currentScene.onDestroy();
-            currentScene = targetScene;
-            currentScene.loadResources();
-            currentScene.init();
-            currentScene.start();
+            if (activeScene != null)
+                activeScene.onDestroy();
+            activeScene = targetScene;
+            activeScene.loadResources();
+            activeScene.init();
+            activeScene.start();
         }
     }
 
-    public static void initializeScene()
+    public static void initializeDefaultScene()
     {
         try {
             Set<Class<?>> classesInArkiPackage = ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes");
@@ -88,7 +88,7 @@ public class SceneManager
 
     public static Scene getActiveScene()
     {
-        return currentScene;
+        return activeScene;
     }
 
 }

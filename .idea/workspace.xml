@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Arkito:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="Arkito">
+    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="changed movement to float">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Arkito_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/components/SampleComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/prefabs/SamplePrefab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/prefabs/SamplePrefab1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +60,9 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -66,6 +74,8 @@
       <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\renderer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement" />
+      <recent name="$PROJECT_DIR$/assets/samples" />
       <recent name="D:\Users\socce\Desktop\Arkito\assets\samples\textures" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -105,6 +115,9 @@
       <workItem from="1685569203839" duration="2606000" />
       <workItem from="1685655043411" duration="2828000" />
       <workItem from="1685737426717" duration="24461000" />
+      <workItem from="1685818492480" duration="3235000" />
+      <workItem from="1685979910953" duration="59000" />
+      <workItem from="1685980010683" duration="3947000" />
     </task>
     <task id="LOCAL-00001" summary="audiomanager">
       <created>1685314596250</created>
@@ -169,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685814026147</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changed movement to float">
+      <created>1685817612699</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685817612699</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +215,7 @@
     <MESSAGE value="cleaning up sample project" />
     <MESSAGE value="Final Version of Arkito" />
     <MESSAGE value="Arkito" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arkito" />
+    <MESSAGE value="changed movement to float" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed movement to float" />
   </component>
 </project>
