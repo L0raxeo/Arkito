@@ -2,94 +2,40 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="Arkito.main:jar" />
       <artifact name="Arkito:jar" />
+      <artifact name="Arkito:jar2" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Arkito_main_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Arkito_jar.xml" beforeDir="false" />
+    <list default="true" id="b94ef1a2-3f1b-4d36-a7f2-4623ea6852c2" name="Changes" comment="changed movement to float">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Arkito_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Arkito_main_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Arkito_main_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/sampleAssetLoaders/SampleAssetLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/sampleAssetLoaders/SampleAssetLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/assetFiles/AssetPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/assetFiles/AssetPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioClip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/audio/AudioClip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/RigidBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/RigidBody.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="AnnotationType" />
-        <option value="package-info" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="2QMAIs7z0w9YhejpPSQIDhX1DFM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Users/socce/Desktop/Arkito/assets/samples/audios",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "vue.rearranger.settings.migration": "true"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\socce\Desktop\Arkito\assets\samples\audios" />
-      <recent name="D:\Users\socce\Desktop\Arkito" />
-      <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\engine" />
-      <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\renderer" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\socce\Desktop\Arkito\arkitoDocumentation\blockDiagrams\gameObject" />
-      <recent name="D:\Users\socce\Desktop\Arkito\arkitoDocumentation\blockDiagrams\gameObject\transform" />
-      <recent name="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement" />
-      <recent name="$PROJECT_DIR$/assets/samples" />
-      <recent name="D:\Users\socce\Desktop\Arkito\assets\samples\textures" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="l0raxeo.arki.renderer" />
-      <recent name="l0raxeo.arki.renderer.appWindow" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="Arkito" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration name="ArkitoApp" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="l0raxeo.arki.engine.mainApp.ArkitoApp" />
       <module name="Arkito.main" />
       <method v="2">
@@ -97,139 +43,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="" />
-      <created>1685153018164</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1685153018164</updated>
-      <workItem from="1685153019354" duration="7937000" />
-      <workItem from="1685218442774" duration="806000" />
-      <workItem from="1685222610727" duration="7850000" />
-      <workItem from="1685312746246" duration="1745000" />
-      <workItem from="1685323126381" duration="7008000" />
-      <workItem from="1685372508388" duration="42000" />
-      <workItem from="1685374345112" duration="439000" />
-      <workItem from="1685377171886" duration="427000" />
-      <workItem from="1685387986447" duration="2319000" />
-      <workItem from="1685478409822" duration="1745000" />
-      <workItem from="1685569203839" duration="2606000" />
-      <workItem from="1685655043411" duration="2828000" />
-      <workItem from="1685737426717" duration="24461000" />
-      <workItem from="1685818492480" duration="3235000" />
-      <workItem from="1685979910953" duration="59000" />
-      <workItem from="1685980010683" duration="3947000" />
-      <workItem from="1686004532717" duration="11855000" />
-      <workItem from="1686022909644" duration="808000" />
-      <workItem from="1686024415809" duration="2042000" />
-    </task>
-    <task id="LOCAL-00001" summary="audiomanager">
-      <created>1685314596250</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1685314596250</updated>
-    </task>
-    <task id="LOCAL-00002" summary="cleaned up window">
-      <created>1685332078446</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1685332078446</updated>
-    </task>
-    <task id="LOCAL-00003" summary="final stuff">
-      <created>1685377366971</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1685377366971</updated>
-    </task>
-    <task id="LOCAL-00004" summary="final stuff">
-      <created>1685377407794</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1685377407794</updated>
-    </task>
-    <task id="LOCAL-00005" summary="final stuff">
-      <created>1685377577021</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1685377577021</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fixed loading screen issue">
-      <created>1685416589511</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1685416589511</updated>
-    </task>
-    <task id="LOCAL-00007" summary="cleaning up sample project">
-      <created>1685416728304</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1685416728304</updated>
-    </task>
-    <task id="LOCAL-00008" summary="cleaning up sample project">
-      <created>1685641196340</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1685641196340</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Arkito">
-      <created>1685814026147</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1685814026147</updated>
-    </task>
-    <task id="LOCAL-00010" summary="changed movement to float">
-      <created>1685817612699</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1685817612699</updated>
-    </task>
-    <task id="LOCAL-00011" summary="stuff">
-      <created>1686018686338</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1686018686338</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="everything" />
-    <MESSAGE value="audiomanager" />
-    <MESSAGE value="cleaned up window" />
-    <MESSAGE value="final stuff" />
-    <MESSAGE value="fixed loading screen issue" />
-    <MESSAGE value="cleaning up sample project" />
-    <MESSAGE value="Final Version of Arkito" />
-    <MESSAGE value="Arkito" />
-    <MESSAGE value="changed movement to float" />
-    <MESSAGE value="stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
 </project>

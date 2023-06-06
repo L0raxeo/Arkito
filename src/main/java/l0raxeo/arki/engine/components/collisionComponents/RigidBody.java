@@ -12,6 +12,7 @@ import java.util.List;
 public class RigidBody extends Component
 {
 
+    private final List<Vector2i> moveForces = new ArrayList<>();
     public Vector2f velocity;
     private final float friction;
 
@@ -117,8 +118,6 @@ public class RigidBody extends Component
     {
         velocity.add(force);
     }
-
-    private final List<Vector2i> moveForces = new ArrayList<>();
 
     public void move(Vector2f velocity)
     {

@@ -2,6 +2,9 @@
   <artifact type="jar" name="Arkito.main:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Arkito_main_jar</output-path>
     <root id="archive" name="Arkito.main.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
       <element id="module-output" name="Arkito.main" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.5/22566d58af70ad3d72308bab63b8339906deb649/joml-1.10.5.jar" path-in-jar="/" />
     </root>
