@@ -16,12 +16,15 @@ public class AudioClip {
 
     public final String name;
     public final String path;
-    public final float volume;
+    /**
+     * [-81, 7]
+     */
+    private float decibelAddends;
 
-    public AudioClip(String referenceName, String filePath, float decidableAddends) {
+    public AudioClip(String referenceName, String path, float decibelAddends) {
         this.name = referenceName;
-        this.path = filePath;
-        this.volume = decidableAddends;
+        this.path = path;
+        this.decibelAddends = decibelAddends;
 
         createClip();
     }
@@ -38,9 +41,14 @@ public class AudioClip {
         }
     }
 
-    private void setVolume() {
+    public void setDecibelAddends(float decibelAddends)
+    {
+        this.decibelAddends = decibelAddends;
+    }
+
+    public void setVolume() {
         FloatControl gainControl = (FloatControl) clip.getControl(MASTER_GAIN);
-        gainControl.setValue(volume);
+        gainControl.setValue(decibelAddends);
     }
 
     public Clip getClip() {

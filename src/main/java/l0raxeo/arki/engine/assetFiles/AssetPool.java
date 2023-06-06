@@ -15,7 +15,6 @@ public class AssetPool
 
     private static final Map<String, Asset<Font>> loadedFonts = new HashMap<>();
     private static final Map<String, Asset<BufferedImage>> loadedBufferedImages = new HashMap<>();
-    private static final Map<String, Asset<AudioClip>> loadedAudioClipsT = new HashMap<>();
 
     public static BufferedImage getBufferedImage(String referenceName)
     {
@@ -37,19 +36,21 @@ public class AssetPool
 
     }
 
-    public static AudioClip getAudioClip(String name, String resource, float volumeAddends)
+    public static AudioClip getAudioClip(String referenceName)
     {
-        AudioClip audioClip;
+        if (loadedAudioClips.containsKey(referenceName))
+            return loadedAudioClips.get(referenceName);
 
-        if (!loadedAudioClips.containsKey(resource))
+        return null;
+    }
+
+    public static void indexAudioClip(String referenceName, String path, float decibelAddends)
+    {
+        if (!loadedAudioClips.containsKey(referenceName))
         {
-            audioClip = new AudioClip(name, resource, volumeAddends);
-            loadedAudioClips.put(resource, audioClip);
+            AudioClip audioClip = new AudioClip(referenceName, path, decibelAddends);
+            loadedAudioClips.put(referenceName, audioClip);
         }
-        else
-            audioClip = loadedAudioClips.get(resource);
-
-        return audioClip;
     }
 
     public static Font getFont(String referenceName)

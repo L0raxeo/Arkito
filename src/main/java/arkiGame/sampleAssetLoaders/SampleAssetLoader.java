@@ -17,7 +17,7 @@ public class SampleAssetLoader implements AssetLoader
         createLoadingScreen(minDurationMillis);
 
         AssetPool.indexBufferedImage("sampleTexture", "assets/samples/textures/sample_texture.png");
-        AssetPool.getAudioClip("sample_audio", "assets/samples/audios/sample_audio.wav", 0);
+        AssetPool.indexAudioClip("sample_audio", "assets/samples/audios/sample_audio.wav", 0);
         AssetPool.indexFont("sampleFont16", "assets/samples/fonts/default_font.ttf", 16);
         AssetPool.indexFont("sampleFont24", "assets/samples/fonts/default_font.ttf", 24);
     }
