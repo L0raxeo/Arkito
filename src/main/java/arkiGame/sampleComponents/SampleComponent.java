@@ -22,7 +22,8 @@ public class SampleComponent extends Component
     }
 
     @Override
-    public void update(double dt) {
+    public void update(double dt)
+    {
         if (MouseManager.hasPressedInput())
         {
             gameObject.getComponent(RigidBody.class).addForce(new Vector2f(0, -10));

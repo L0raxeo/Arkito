@@ -26,14 +26,14 @@ public class ImageTexture extends Component
     {
         this.texture = texture;
         this.rotationAnchor = new Vector2i();
-        inheritRotation = true;
+        this.inheritRotation = true;
     }
 
     public ImageTexture(BufferedImage texture, Vector2i rotationAnchor)
     {
         this.texture = texture;
         this.rotationAnchor = rotationAnchor;
-        inheritRotation = true;
+        this.inheritRotation = true;
     }
 
     public ImageTexture(BufferedImage texture, float rotation, Vector2i rotationAnchor)
@@ -41,7 +41,32 @@ public class ImageTexture extends Component
         this.texture = texture;
         this.rotation = rotation;
         this.rotationAnchor = rotationAnchor;
-        inheritRotation = false;
+        this.inheritRotation = false;
+    }
+
+    public ImageTexture(BufferedImage texture, boolean flipped)
+    {
+        this.texture = texture;
+        this.rotationAnchor = new Vector2i();
+        this.inheritRotation = true;
+        this.flipped = flipped;
+    }
+
+    public ImageTexture(BufferedImage texture, Vector2i rotationAnchor, boolean flipped)
+    {
+        this.texture = texture;
+        this.rotationAnchor = rotationAnchor;
+        this.inheritRotation = true;
+        this.flipped = flipped;
+    }
+
+    public ImageTexture(BufferedImage texture, float rotation, Vector2i rotationAnchor, boolean flipped)
+    {
+        this.texture = texture;
+        this.rotation = rotation;
+        this.rotationAnchor = rotationAnchor;
+        this.inheritRotation = false;
+        this.flipped = flipped;
     }
 
     @Override

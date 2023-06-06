@@ -36,7 +36,7 @@ public class RigidBody extends Component
 
                 if (collider.type == CollisionType.TOP && velocity.y < 0) {
                     velocity.y = 0;
-                    gameObject.transform.position.y = collider.collider.transform.position.y + collider.collider.transform.scale.y;
+                    gameObject.transform.noCamScreenPosition.y = collider.collider.transform.noCamScreenPosition.y + collider.collider.transform.scale.y;
                     teleportY = true;
 
                     //friction
@@ -46,7 +46,7 @@ public class RigidBody extends Component
                         velocity.x -= friction / 10;
                 } else if (collider.type == CollisionType.BOTTOM && velocity.y > 0) {
                     velocity.y = 0;
-                    gameObject.transform.position.y = collider.collider.transform.position.y - gameObject.transform.scale.y;
+                    gameObject.transform.noCamScreenPosition.y = collider.collider.transform.noCamScreenPosition.y - gameObject.transform.scale.y;
                     teleportY = true;
 
                     //friction
@@ -58,7 +58,7 @@ public class RigidBody extends Component
 
                 if (collider.type == CollisionType.RIGHT && velocity.x > 0) {
                     velocity.x = 0;
-                    gameObject.transform.position.x = collider.collider.transform.position.x - gameObject.transform.scale.x;
+                    gameObject.transform.noCamScreenPosition.x = collider.collider.transform.noCamScreenPosition.x - gameObject.transform.scale.x;
                     teleportX = true;
 
                     //friction
@@ -68,7 +68,7 @@ public class RigidBody extends Component
                         velocity.y -= friction / 10;
                 } else if (collider.type == CollisionType.LEFT && velocity.x < 0) {
                     velocity.x = 0;
-                    gameObject.transform.position.x = collider.collider.transform.position.x + collider.collider.transform.scale.x;
+                    gameObject.transform.noCamScreenPosition.x = collider.collider.transform.noCamScreenPosition.x + collider.collider.transform.scale.x;
                     teleportX = true;
 
                     //friction
@@ -91,10 +91,10 @@ public class RigidBody extends Component
             velocity.y = 0;
 
         if (!teleportX)
-            gameObject.transform.position.x += velocity.x * dt;
+            gameObject.transform.noCamScreenPosition.x += velocity.x * dt;
 
         if (!teleportY)
-            gameObject.transform.position.y += velocity.y * dt;
+            gameObject.transform.noCamScreenPosition.y += velocity.y * dt;
 
         if(!moveForces.isEmpty())
         {

@@ -13,26 +13,24 @@ public class EventTrigger
         EventHandler.addEventTrigger(referenceName, this);
     }
 
-    public void triggerEvent(Object sender)
+    public void triggerEvent(Object... parameters)
     {
-        subscribers.forEach((subscriber, method) -> {
-            invokeMethods(sender, subscriber, method);
-        });
+        subscribers.forEach((subscriber, method) -> invokeMethods(subscriber, method, parameters));
     }
 
-    private void invokeMethods(Object sender, Object subscriber, Method method)
+    private void invokeMethods(Object subscriber, Method method, Object... parameters)
     {
         try {
-            method.invoke(subscriber, sender);
+            method.invoke(subscriber, parameters);
         } catch (Exception e) {
             blindlyInvokeMethods(subscriber, method);
         }
     }
 
-    private void blindlyInvokeMethods(Object subscriber, Method method)
+    private void blindlyInvokeMethods(Object subscriber, Method method, Object... parameters)
     {
         try {
-            method.invoke(subscriber);
+            method.invoke(subscriber, parameters);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

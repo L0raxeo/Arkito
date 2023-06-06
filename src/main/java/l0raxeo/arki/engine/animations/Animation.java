@@ -5,14 +5,14 @@ import java.awt.image.BufferedImage;
 public class Animation
 {
 
-    private final int speed;
+    private final int frameIntervals;
     private int index;
     private long lastTime, timer;
     private final BufferedImage[] frames;
 
-    public Animation(int speed, BufferedImage... frames)
+    public Animation(int frameIntervals, BufferedImage... frames)
     {
-        this.speed = speed;
+        this.frameIntervals = frameIntervals;
         this.frames = frames;
         index = 0;
         timer = 0;
@@ -24,7 +24,7 @@ public class Animation
         timer += System.currentTimeMillis() - lastTime;
         lastTime = System.currentTimeMillis();
 
-        if (timer > speed)
+        if (timer > frameIntervals)
         {
             index++;
             timer = 0;

@@ -11,19 +11,16 @@ public class Camera
 
     private Camera() {}
 
-    public static void reset()
+    public static void resetPosition()
     {
         xOffset = 0;
         yOffset = 0;
     }
 
-    /**
-     * @param position world position
-     */
-    public static void setWorldPosition(Vector2i position)
+    public static void setWorldPosition(Vector2i worldPosition)
     {
-        xOffset = -position.x;
-        yOffset = position.y;
+        xOffset = -worldPosition.x;
+        yOffset = worldPosition.y;
     }
 
     public static Vector2i getWorldPosition()

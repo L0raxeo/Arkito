@@ -22,7 +22,10 @@ public class SamplePrefab1
                 new Vector3f(50, 500, 1),
                 new Vector2f(32, 32),
                 45,
-                new ImageTexture(AssetPool.getBufferedImage("sampleTexture"), new Vector2i(16, 16)),
+                new ImageTexture(
+                        AssetPool.getBufferedImage("sampleTexture"),
+                        new Vector2i(16, 16)
+                ),
                 new RigidBody(1),
                 new Physics(),
                 new BoxBounds(),

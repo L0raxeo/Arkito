@@ -9,14 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="changed movement to float">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Arkito_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.png" afterDir="false" />
+    <list default="true" id="600e8e2f-faa4-4c02-a3f8-442b7f7538ab" name="Changes" comment="package restructuring">
+      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/Blank diagram.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/Blank diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/transform/Blank diagram.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/transform/Blank diagram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/samplePrefabs/SamplePrefab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/samplePrefabs/SamplePrefab1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/animations/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/animations/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/RigidBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/RigidBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/renderComponents/ImageTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/renderComponents/ImageTexture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/eventSystem/EventTrigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/eventSystem/EventTrigger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/gameObjects/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/gameObjects/Transform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/gameObjects/prefabs/Prefabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/gameObjects/prefabs/Prefabs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Camera.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +82,8 @@
       <recent name="D:\Users\socce\Desktop\Arkito\src\main\java\l0raxeo\arki\renderer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\socce\Desktop\Arkito\arkitoDocumentation\blockDiagrams\gameObject" />
+      <recent name="D:\Users\socce\Desktop\Arkito\arkitoDocumentation\blockDiagrams\gameObject\transform" />
       <recent name="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement" />
       <recent name="$PROJECT_DIR$/assets/samples" />
       <recent name="D:\Users\socce\Desktop\Arkito\assets\samples\textures" />
@@ -118,6 +128,7 @@
       <workItem from="1685818492480" duration="3235000" />
       <workItem from="1685979910953" duration="59000" />
       <workItem from="1685980010683" duration="3947000" />
+      <workItem from="1686004532717" duration="11075000" />
     </task>
     <task id="LOCAL-00001" summary="audiomanager">
       <created>1685314596250</created>

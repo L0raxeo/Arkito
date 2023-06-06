@@ -8,6 +8,8 @@ import org.joml.Vector3f;
 
 public class Prefabs {
 
+    private Prefabs() {}
+
     public static GameObject generate(String name, Vector3f pos, Vector2f size, Component... comps)
     {
         GameObject go = new GameObject(name, new Transform(pos.add(0, size.y, 0), size));

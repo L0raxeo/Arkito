@@ -18,7 +18,7 @@ public class SceneManager
 
     private SceneManager() {}
 
-    public static Scene getScene(Class<?> sceneClass)
+    public static <T extends Scene> Scene getScene(Class<T> sceneClass)
     {
         for (Scene s : instantiatedScenes)
             if (s.getClass().equals(sceneClass))
