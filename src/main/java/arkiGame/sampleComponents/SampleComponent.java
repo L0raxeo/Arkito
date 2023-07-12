@@ -3,6 +3,7 @@ package arkiGame.sampleComponents;
 import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.audio.AudioClip;
 import l0raxeo.arki.engine.audio.AudioManager;
+import l0raxeo.arki.engine.collision.Collision;
 import l0raxeo.arki.engine.components.Component;
 import l0raxeo.arki.engine.components.collisionComponents.RigidBody;
 import l0raxeo.arki.engine.eventSystem.EventHandler;
