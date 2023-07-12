@@ -17,6 +17,5 @@ public @interface AppConfig
     boolean resizeable();
     int framesPerSecondCap() default 60;
     int updatesPerSecond() default 60;
-    boolean systemDebugInfo();
 
 }

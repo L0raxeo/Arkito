@@ -10,14 +10,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b94ef1a2-3f1b-4d36-a7f2-4623ea6852c2" name="Changes" comment="some rigidbody shifting">
+    <list default="true" id="b94ef1a2-3f1b-4d36-a7f2-4623ea6852c2" name="Changes" comment="stuff">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Arkito_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Arkito_main_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Arkito_main_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/classStructure/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/classStructure/ClassFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/collision/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/collision/Collision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/RigidBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/components/collisionComponents/RigidBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/SceneManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/renderer/AppWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/Blank diagram.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/Blank diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/transform/Blank diagram.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/transform/Blank diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/SampleAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/SampleAppConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +91,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some rigidbody shifting" />
