@@ -26,6 +26,8 @@ public class AppWindow implements Runnable
     public static String APP_TITLE;
     public static int WINDOW_WIDTH, WINDOW_HEIGHT;
     public static boolean IS_RESIZEABLE;
+    public static int UPS_CAP;
+    public static int FPS_CAP;
     public static Dimension WINDOW_SIZE;
     private Thread thread;
     private boolean running = false;
@@ -72,10 +74,15 @@ public class AppWindow implements Runnable
             throw new RuntimeException(e);
         }
         Class<?> appConfig = Objects.requireNonNull(ClassFinder.findAnnotatedClass(classesInArkiPackage, AppConfig.class));
-        APP_TITLE = appConfig.getAnnotation(AppConfig.class).windowTitle();
-        WINDOW_WIDTH = appConfig.getAnnotation(AppConfig.class).windowWidth();
-        WINDOW_HEIGHT = appConfig.getAnnotation(AppConfig.class).windowHeight();
-        IS_RESIZEABLE = appConfig.getAnnotation(AppConfig.class).resizeable();
+        AppConfig appConfigAnnotation = appConfig.getAnnotation(AppConfig.class);
+
+        APP_TITLE = appConfigAnnotation.windowTitle();
+        WINDOW_WIDTH = appConfigAnnotation.windowWidth();
+        WINDOW_HEIGHT = appConfigAnnotation.windowHeight();
+        IS_RESIZEABLE = appConfigAnnotation.resizeable();
+        UPS_CAP = appConfigAnnotation.updatesPerSecond();
+        FPS_CAP = appConfigAnnotation.framesPerSecondCap();
+
         WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
     }
 
@@ -118,41 +125,47 @@ public class AppWindow implements Runnable
 
     private void loop()
     {
+        double timePerUpdate = 1000000000D / UPS_CAP;
+        double timePerRender = 1000000000D / FPS_CAP;
+
+        double deltaUpdate = 0;
+        double deltaRender = 0;
+
+        long now;
         long lastTime = System.nanoTime();
-        double timePerTick = 1000000000D / 60D;
-        int ticks = 0;
-        int frames = 0;
+
         long lastTimer = System.currentTimeMillis();
-        double delta = 0;
+        int updates = 0;
+        int frames = 0;
+
         while (running)
         {
-            long now = System.nanoTime();
-            delta += (now - lastTime) / timePerTick;
+            now = System.nanoTime();
+            deltaUpdate += (now - lastTime) / timePerUpdate;
+            deltaRender += (now - lastTime) / timePerRender;
             lastTime = now;
 
-            GraphicsDraw.beginFrame();
-
-            while (delta >= 1)
+            if(deltaUpdate >= 1)
             {
-                ticks++;
                 if (!LoadingScreen.isLoading)
-                    update(delta);
-                /*
-                caps the FPS to 60 but reduces lag spikes
-                move render & frames outside of while loop to increase FPS
-                    increase lag spikes if on older machine
-                 */
+                    gameUpdate(deltaUpdate);
+                deltaUpdate--;
+                updates++;
+            }
+
+            if(deltaRender >= 1)
+            {
                 render();
                 frames++;
-                delta -= 1;
+                deltaRender--;
             }
 
             if (System.currentTimeMillis() - lastTimer >= 1000)
             {
                 lastTimer += 1000;
-                getFrame().setTitle(APP_TITLE + " | TPS: " + ticks + " FPS: " + frames);
+                getFrame().setTitle(APP_TITLE + " | UPS: " + updates + " FPS: " + frames);
                 frames = 0;
-                ticks = 0;
+                updates = 0;
             }
         }
     }
@@ -164,7 +177,7 @@ public class AppWindow implements Runnable
         WINDOW_SIZE = new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT);
     }
 
-    private void update(double dt)
+    private void gameUpdate(double dt)
     {
         mouseListener.update();
         keyListener.update();
@@ -228,7 +241,7 @@ public class AppWindow implements Runnable
     {
         running = true;
 
-        thread = new Thread(this, "Rebound" + "_main");
+        thread = new Thread(this, APP_TITLE + "_main");
         thread.start();
     }
 
@@ -237,12 +250,9 @@ public class AppWindow implements Runnable
         if (!running) return;
         running = false;
 
-        try
-        {
+        try {
             thread.join();
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

@@ -4,6 +4,7 @@ package arkiGame;
         windowTitle = "ArkiGame",
         windowWidth = 720,
         windowHeight = 720,
-        resizeable = true
+        resizeable = true,
+        systemDebugInfo = false
 )
 public class SampleAppConfig {}

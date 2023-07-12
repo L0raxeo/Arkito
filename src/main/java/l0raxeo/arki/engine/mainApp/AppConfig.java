@@ -15,5 +15,8 @@ public @interface AppConfig
     int windowWidth();
     int windowHeight();
     boolean resizeable();
+    int framesPerSecondCap() default 60;
+    int updatesPerSecond() default 60;
+    boolean systemDebugInfo();
 
 }
