@@ -69,7 +69,7 @@ public class AppWindow implements Runnable
     {
         Set<Class<?>> classesInArkiPackage;
         try {
-            classesInArkiPackage = ClassFinder.findAllClassesUsingClassLoader("arkiGame");
+            classesInArkiPackage = ClassFinder.findAllClassesInPackage("arkiGame");
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }

@@ -119,17 +119,37 @@ public class RigidBody extends Component
         velocity.add(force);
     }
 
-    public void move(Vector2f velocity)
+    public void addForceX(int xForce)
+    {
+        velocity.x += xForce;
+    }
+
+    public void addForceY(int yForce)
+    {
+        velocity.y += yForce;
+    }
+
+    public void subForce(Vector2f force)
+    {
+        velocity.sub(force);
+    }
+
+    public void setForce(Vector2f force)
+    {
+        velocity = force;
+    }
+
+    public void setVelocity(Vector2f velocity)
     {
         this.velocity = velocity;
     }
 
-    public void moveX(int x)
+    public void setVelocityX(int x)
     {
         this.velocity.x = x;
     }
 
-    public void moveY(int y)
+    public void setVelocityY(int y)
     {
         this.velocity.y = y;
     }

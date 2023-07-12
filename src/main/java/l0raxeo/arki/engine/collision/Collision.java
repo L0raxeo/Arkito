@@ -15,53 +15,56 @@ public class Collision
     public Collision(Transform originTransform, GameObject collider, GameObject origin)
     {
         this.collider = collider;
-        this.type = resolveCollision(originTransform, collider.transform);
+        this.type = resolveCollisionType(originTransform, collider.transform);
         this.origin = origin;
     }
 
-    private CollisionType resolveCollision(Transform ot, Transform ct)
+    private CollisionType resolveCollisionType(Transform originTransform, Transform colliderTransform)
     {
-        float ox1 = ot.getScreenPosition().x;
-        float ox2 = ox1 + ot.scale.x;
-        float oy1 = ot.getScreenPosition().y;
-        float oy2 = oy1 + ot.scale.y;
-        float cx1 = ct.getScreenPosition().x;
-        float cx2 = cx1 + ct.scale.x;
-        float cy1 = ct.getScreenPosition().y;
-        float cy2 = cy1 + ct.scale.y;
-        float oCenterX = ot.getScreenPosition().x + ((float) ot.scale.x / 2);
-        float oCenterY = ot.getScreenPosition().y + ((float) ot.scale.y / 2);
-        float cCenterX = ct.getScreenPosition().x + ((float) ct.scale.x / 2);
-        float cCenterY = ct.getScreenPosition().y + ((float) ct.scale.y / 2);
+        float originLeftX = originTransform.getScreenPosition().x;
+        float originRightX = originLeftX + originTransform.scale.x;
+        float originTopY = originTransform.getScreenPosition().y;
+        float originBottomY = originTopY + originTransform.scale.y;
+        float colliderLeftX = colliderTransform.getScreenPosition().x;
+        float colliderRightX = colliderLeftX + colliderTransform.scale.x;
+        float colliderTopY = colliderTransform.getScreenPosition().y;
+        float colliderBottomY = colliderTopY + colliderTransform.scale.y;
+        float originCenterX = originTransform.getScreenPosition().x + (originTransform.scale.x / 2);
+        float originCenterY = originTransform.getScreenPosition().y + (originTransform.scale.y / 2);
+        float colliderCenterX = colliderTransform.getScreenPosition().x + (colliderTransform.scale.x / 2);
+        float colliderCenterY = colliderTransform.getScreenPosition().y + (colliderTransform.scale.y / 2);
 
         // Q1
-        if (oCenterX < cCenterX && oCenterY < cCenterY)
+        if (originCenterX < colliderCenterX && originCenterY < colliderCenterY)
         {
-            if (ox2 - cx1 > oy2 - cy1)
+            if (originRightX - colliderLeftX > originBottomY - colliderTopY)
                 return BOTTOM;
             else
                 return RIGHT;
         }
         // Q2
-        else if (oCenterX > cCenterX && oCenterY < cCenterY)
+        else if (originCenterX > colliderCenterX && originCenterY < colliderCenterY)
         {
-            if (cx2 - ox1 > oy2 - cy1)
+            if (colliderRightX - originLeftX > originBottomY - colliderTopY)
                 return BOTTOM;
-            else return LEFT;
+
+            return LEFT;
         }
         // Q3
-        else if (oCenterX > cCenterX && oCenterY > cCenterY)
+        else if (originCenterX > colliderCenterX && originCenterY > colliderCenterY)
         {
-            if (cx2 - ox1 > cy2 - oy1)
+            if (colliderRightX - originLeftX > colliderBottomY - originTopY)
                 return TOP;
-            else return LEFT;
+
+            return LEFT;
         }
         // Q4
-        else if (oCenterX < cCenterX && oCenterY > cCenterY)
+        else if (originCenterX < colliderCenterX && originCenterY > colliderCenterY)
         {
-            if (ox2 - cx1 > cy2 - oy1)
+            if (originRightX - colliderLeftX > colliderBottomY - originTopY)
                 return TOP;
-            else return RIGHT;
+
+            return RIGHT;
         }
 
         return NONE;

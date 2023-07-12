@@ -29,56 +29,52 @@ public class SceneManager
 
     public static void changeScene(Class<?> sceneClass)
     {
-        if (sceneClass.isInstance(Scene.class))
+        Scene targetScene = null;
+
+        boolean isSceneAlreadyActive = activeScene != null && activeScene.getClass().equals(sceneClass);
+        if (isSceneAlreadyActive)
         {
-            assert false : "Class '" + sceneClass + "' is not a subclass of Scene";
+            assert false : "Cannot change to current scene '" + activeScene + "'";
             return;
         }
 
-        Scene targetScene = null;
+        boolean sceneExists = false;
 
-        if (activeScene != null && activeScene.getClass().equals(sceneClass))
+        for (Scene s : instantiatedScenes)
         {
-            assert false : "Cannot change to current scene '" + activeScene + "'";
-        }
-        else
-        {
-            boolean sceneExists = false;
-
-            for (Scene s : instantiatedScenes)
-                if (s.getClass().equals(sceneClass))
-                {
-                    sceneExists = true;
-                    targetScene = s;
-                    break;
-                }
-
-            if (!sceneExists)
+            if (s.getClass().equals(sceneClass))
             {
-                try {
-                    targetScene = (Scene) sceneClass.getDeclaredConstructor().newInstance();
-                    instantiatedScenes.add(targetScene);
-                } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
-                         NoSuchMethodException e) {
-                    throw new RuntimeException(e);
-                }
+                sceneExists = true;
+                targetScene = s;
+                break;
             }
-
-            GuiLayer.clear();
-
-            if (activeScene != null)
-                activeScene.onDestroy();
-            activeScene = targetScene;
-            activeScene.loadResources();
-            activeScene.init();
-            activeScene.start();
         }
+
+        if (!sceneExists)
+        {
+            try {
+                targetScene = (Scene) sceneClass.getDeclaredConstructor().newInstance();
+                instantiatedScenes.add(targetScene);
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException |
+                     NoSuchMethodException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        GuiLayer.clear();
+
+        if (activeScene != null)
+            activeScene.onDestroy();
+        activeScene = targetScene;
+        activeScene.loadResources();
+        activeScene.init();
+        activeScene.start();
     }
 
     public static void initializeDefaultScene()
     {
         try {
-            Set<Class<?>> classesInArkiPackage = ClassFinder.findAllClassesUsingClassLoader("arkiGame.scenes");
+            Set<Class<?>> classesInArkiPackage = ClassFinder.findAllClassesInPackage("arkiGame.scenes");
             Class<?> defaultSceneClass = Objects.requireNonNull(ClassFinder.findAnnotatedClass(classesInArkiPackage, DefaultScene.class));
             changeScene(defaultSceneClass);
         } catch (IOException | ClassNotFoundException e) {
