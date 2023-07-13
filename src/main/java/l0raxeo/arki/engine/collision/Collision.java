@@ -39,8 +39,8 @@ public class Collision
         {
             if (originRightX - colliderLeftX > originBottomY - colliderTopY)
                 return BOTTOM;
-            else
-                return RIGHT;
+
+            return RIGHT;
         }
         // Q2
         else if (originCenterX > colliderCenterX && originCenterY < colliderCenterY)
