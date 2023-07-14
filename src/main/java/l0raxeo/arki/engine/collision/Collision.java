@@ -25,12 +25,15 @@ public class Collision
         float originRightX = originLeftX + originTransform.scale.x;
         float originTopY = originTransform.getScreenPosition().y;
         float originBottomY = originTopY + originTransform.scale.y;
+
         float colliderLeftX = colliderTransform.getScreenPosition().x;
         float colliderRightX = colliderLeftX + colliderTransform.scale.x;
         float colliderTopY = colliderTransform.getScreenPosition().y;
         float colliderBottomY = colliderTopY + colliderTransform.scale.y;
+        
         float originCenterX = originTransform.getScreenPosition().x + (originTransform.scale.x / 2);
         float originCenterY = originTransform.getScreenPosition().y + (originTransform.scale.y / 2);
+
         float colliderCenterX = colliderTransform.getScreenPosition().x + (colliderTransform.scale.x / 2);
         float colliderCenterY = colliderTransform.getScreenPosition().y + (colliderTransform.scale.y / 2);
 
