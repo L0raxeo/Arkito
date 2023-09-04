@@ -77,8 +77,7 @@ public class GuiTextField extends GuiKeyListener
         g.fillRect(position.x + 4, position.y + 4, scale.x - 8, scale.y - 8);
         String curText = text;
         if (curText.equals("")) {
-            text = defaultText;
-            curText = text;
+            curText = defaultText;
         }
         GuiText.drawString(g,
                 curText,
@@ -122,7 +121,7 @@ public class GuiTextField extends GuiKeyListener
 
     public String getText()
     {
-        return this.text;
+        return !this.text.equals("") ? text : defaultText;
     }
 
 }
