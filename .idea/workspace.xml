@@ -10,17 +10,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b94ef1a2-3f1b-4d36-a7f2-4623ea6852c2" name="Changes" comment="stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Arkito_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Arkito_main_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Arkito_main_jar.xml" afterDir="false" />
+    <list default="true" id="b94ef1a2-3f1b-4d36-a7f2-4623ea6852c2" name="Changes" comment="some rigidbody shifting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/Blank diagram.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/Blank diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/transform/Blank diagram.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/gameObject/transform/Blank diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkitoDocumentation/blockDiagrams/sceneManagement/Blank diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/SampleAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/SampleAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/scenes/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiTextField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/ui/components/GuiTextField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Qpk7Jn1N2Za0HiXlIxVnPdAgWY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,6 +39,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -85,8 +82,49 @@
       <workItem from="1688926607335" duration="7460000" />
       <workItem from="1688962300699" duration="5220000" />
       <workItem from="1689187554977" duration="306000" />
+      <workItem from="1689195340043" duration="2539000" />
+      <workItem from="1689210191657" duration="136000" />
+      <workItem from="1689210342310" duration="156000" />
+      <workItem from="1689260366584" duration="5114000" />
+      <workItem from="1689289412683" duration="596000" />
+      <workItem from="1689297139104" duration="3600000" />
+      <workItem from="1689388592353" duration="51000" />
+      <workItem from="1692766033435" duration="883000" />
+      <workItem from="1692838906525" duration="213000" />
+      <workItem from="1692839133322" duration="806000" />
+      <workItem from="1692850200634" duration="34000" />
+      <workItem from="1693088004025" duration="594000" />
+      <workItem from="1693354678982" duration="118000" />
+      <workItem from="1693584818551" duration="296000" />
+      <workItem from="1693699035495" duration="54000" />
+      <workItem from="1693794008429" duration="16000" />
+      <workItem from="1693844151244" duration="1767000" />
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some rigidbody shifting">
+      <option name="closed" value="true" />
+      <created>1689189431554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689189431554</updated>
+    </task>
+    <task id="LOCAL-00003" summary="some rigidbody shifting">
+      <option name="closed" value="true" />
+      <created>1689286156678</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689286156678</updated>
+    </task>
+    <task id="LOCAL-00004" summary="some rigidbody shifting">
+      <option name="closed" value="true" />
+      <created>1689352878708</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689352878708</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

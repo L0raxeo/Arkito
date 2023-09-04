@@ -7,6 +7,7 @@ import l0raxeo.arki.renderer.AppWindow;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -14,6 +15,7 @@ public abstract class Scene
 {
 
     protected List<GameObject> gameObjects = new ArrayList<>();
+    private final Comparator<GameObject> renderSorter = Comparator.comparingInt(gameObject -> gameObject.transform.getzIndex());
     protected Color backdrop = new Color(0, 0, 0, 0);
 
     public Scene() {}
@@ -92,6 +94,8 @@ public abstract class Scene
 
             gameObject.update(dt);
         }
+
+        getGameObjects().sort(renderSorter);
     }
 
     protected void renderSceneGameObjects(Graphics g)

@@ -7,8 +7,7 @@ import org.joml.Vector2i;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class GuiTextField extends GuiKeyListener
-{
+public class GuiTextField extends GuiKeyListener {
 
     private final Color[] color;
     private final Font font;
@@ -25,17 +24,27 @@ public class GuiTextField extends GuiKeyListener
 
     @Override
     public void render(Graphics g) {
-        if (selected)
+        if (selected)  {
             g.setColor(color[0]);
-        else g.setColor(color[1]);
+        }
+        else {
+            g.setColor(color[1]);
+        }
+
         g.fillRect(position.x, position.y, scale.x, scale.y);
-        if (!selected)
+
+        if (!selected) {
             g.setColor(color[0]);
-        else g.setColor(color[1]);
+        }
+        else {
+            g.setColor(color[1]);
+        }
+
         g.fillRect(position.x + 4, position.y + 4, scale.x - 8, scale.y - 8);
         String curText = text;
-        if (curText.equals(""))
+        if (curText.equals("")) {
             curText = name;
+        }
         GuiText.drawString(g,
                             curText,
                             new Vector2i(position.x + scale.x / 2, position.y + scale.y / 2),
@@ -46,23 +55,25 @@ public class GuiTextField extends GuiKeyListener
     }
 
     @Override
-    public void onClick()
-    {
+    public void onClick() {
         selected = !selected;
-        GuiLayer.selectComponent(this);
+
+        if (selected)
+            GuiLayer.selectComponent(this);
+        else
+            GuiLayer.selectComponent(null);
     }
 
-    public void keyPress(KeyEvent e)
-    {
-        if(selected)
-        {
-            if (e.getKeyCode() == KeyEvent.VK_DELETE || e.getKeyCode() == KeyEvent.VK_BACK_SPACE)
-            {
+    public void keyPress(KeyEvent e) {
+        if(selected) {
+            if (e.getKeyCode() == KeyEvent.VK_DELETE || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
                 if (text.length() > 0)
                     text = text.substring(0, text.length() - 1);
             }
-            else if (!e.isShiftDown())
-            {
+            else if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                onClick();
+            }
+            else if (!e.isShiftDown()) {
                 text = text.concat(String.valueOf(e.getKeyChar()));
             }
         }
