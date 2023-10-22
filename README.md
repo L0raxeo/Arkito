@@ -7,10 +7,10 @@ Getting Started & Documentation:
 https://l0raxeo.github.io/arkito_documentation_website.github.io/
 
 Previous Arkito Versions:
-(Version 1; Engine-B) - https://github.com/L0raxeo/Engine-B
+(Version 1; Engine-B) - https://github.com/L0raxeo/Engine-B\
 
-(Version 2; Arki_2.2) - https://github.com/L0raxeo/Arki-2.2
+(Version 2; Arki_2.2) - https://github.com/L0raxeo/Arki-2.2\
 
-(Version 3; Arki_3.0) - https://github.com/L0raxeo/Arki-3.0
+(Version 3; Arki_3.0) - https://github.com/L0raxeo/Arki-3.0\
 
-(Version 4; Arkito [final]) - https://github.com/L0raxeo/Arkito
+(Version 4; Arkito [final]) - https://github.com/L0raxeo/Arkito\
