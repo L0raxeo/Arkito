@@ -10,15 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b94ef1a2-3f1b-4d36-a7f2-4623ea6852c2" name="Changes" comment="added move screen coordinates">
-      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arkiGame/samplePrefabs/SamplePrefab3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/sampleComponents/SampleComponent1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/samplePrefabs/SamplePrefab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/samplePrefabs/SamplePrefab1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arkiGame/scenes/SampleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/gameObjects/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/l0raxeo/arki/engine/gameObjects/Transform.java" afterDir="false" />
-    </list>
+    <list default="true" id="b94ef1a2-3f1b-4d36-a7f2-4623ea6852c2" name="Changes" comment="added move screen coordinates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +112,7 @@
       <workItem from="1693867339413" duration="188000" />
       <workItem from="1694320572738" duration="727000" />
       <workItem from="1705022943320" duration="1413000" />
-      <workItem from="1705096136783" duration="5861000" />
+      <workItem from="1705096136783" duration="5884000" />
     </task>
     <task id="LOCAL-00002" summary="some rigidbody shifting">
       <option name="closed" value="true" />
@@ -178,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705110035544</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added move screen coordinates">
+      <option name="closed" value="true" />
+      <created>1705120220192</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705120220192</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -18,10 +18,14 @@ public class GameObject
     public Transform transform;
     private boolean isDead = false;
 
-    public GameObject(String name, Transform transform) {
+    public GameObject(String name, Transform transform, Component... components) {
         this.name = name;
         this.components = new ArrayList<>();
         this.transform = transform;
+
+        for (Component c : components) {
+            addComponent(c);
+        }
 
         generateUid();
     }
