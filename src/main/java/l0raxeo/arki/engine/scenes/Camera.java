@@ -72,6 +72,18 @@ public class Camera
         yOffset += yVel;
     }
 
+    public static void moveScreenCoords(Vector2i vel)
+    {
+        xOffset -= vel.x;
+        yOffset -= vel.y;
+    }
+
+    public static void moveScreenCoords(int xVel, int yVel)
+    {
+        xOffset -= xVel;
+        yOffset -= yVel;
+    }
+
     public static int xOffset()
     {
         return xOffset;
