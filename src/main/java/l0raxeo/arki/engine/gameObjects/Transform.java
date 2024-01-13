@@ -81,6 +81,12 @@ public class Transform
         this.noCamScreenPosition.y -= worldCoordinateOffset.y;
     }
 
+    public void moveScreenPosition(Vector2f screenCoordinateOffset)
+    {
+        this.noCamScreenPosition.x += screenCoordinateOffset.x;
+        this.noCamScreenPosition.y += screenCoordinateOffset.y;
+    }
+
     @Override
     public boolean equals(Object obj)
     {

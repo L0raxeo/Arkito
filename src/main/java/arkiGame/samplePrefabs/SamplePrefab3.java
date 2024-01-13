@@ -1,10 +1,9 @@
 package arkiGame.samplePrefabs;
 
-import arkiGame.sampleComponents.SampleComponent1;
+import arkiGame.sampleComponents.SampleComponent3;
 import l0raxeo.arki.engine.assetFiles.AssetPool;
 import l0raxeo.arki.engine.components.collisionComponents.BoxBounds;
 import l0raxeo.arki.engine.components.collisionComponents.RigidBody;
-import l0raxeo.arki.engine.components.physicsComponents.Physics;
 import l0raxeo.arki.engine.components.renderComponents.ImageTexture;
 import l0raxeo.arki.engine.gameObjects.GameObject;
 import l0raxeo.arki.engine.gameObjects.prefabs.Prefabs;
@@ -12,14 +11,14 @@ import org.joml.Vector2f;
 import org.joml.Vector2i;
 import org.joml.Vector3f;
 
-public class SamplePrefab1
+public class SamplePrefab3
 {
 
     public static GameObject generate()
     {
         return Prefabs.generate(
-                "sample_object",
-                new Vector3f(50, 500, 1),
+                "sample_movement",
+                new Vector3f(256, 500, 1),
                 new Vector2f(32, 32),
                 45,
                 new ImageTexture(
@@ -27,9 +26,8 @@ public class SamplePrefab1
                         new Vector2i(16, 16)
                 ),
                 new RigidBody(1),
-                new Physics(),
                 new BoxBounds(),
-                new SampleComponent1()
+                new SampleComponent3()
         );
     }
 

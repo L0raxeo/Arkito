@@ -2,6 +2,7 @@ package arkiGame.scenes;
 
 import arkiGame.sampleAssetLoaders.SampleAssetLoader;
 import arkiGame.samplePrefabs.SamplePrefab2;
+import arkiGame.samplePrefabs.SamplePrefab3;
 import l0raxeo.arki.engine.assetFiles.AssetPool;
 import arkiGame.samplePrefabs.SamplePrefab1;
 import l0raxeo.arki.engine.eventSystem.EventTrigger;
@@ -31,6 +32,7 @@ public class SampleScene extends Scene
         new EventTrigger("sampleEvent");
         addGameObject(SamplePrefab1.generate());
         addGameObject(SamplePrefab2.generate());
+        addGameObject(SamplePrefab3.generate());
     }
 
     @Override

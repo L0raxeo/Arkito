@@ -9,7 +9,7 @@ import l0raxeo.arki.engine.eventSystem.EventHandler;
 import l0raxeo.arki.engine.input.mouse.MouseManager;
 import l0raxeo.arki.engine.scenes.Camera;
 
-public class SampleComponent extends Component
+public class SampleComponent1 extends Component
 {
     private AudioClip sampleAudioClip;
 
