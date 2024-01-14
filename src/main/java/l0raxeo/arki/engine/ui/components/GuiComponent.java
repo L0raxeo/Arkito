@@ -14,6 +14,8 @@ public abstract class GuiComponent
     protected Vector2i scale;
     public final Rectangle bounds;
 
+    private boolean isDead = false;
+
     public GuiComponent(String name, Vector2i position, Vector2i scale)
     {
         this.name = name;
@@ -29,5 +31,14 @@ public abstract class GuiComponent
     public abstract void render(Graphics g);
 
     public abstract void onClick();
+
+    public boolean isDead() {
+        return this.isDead;
+    }
+
+    public void die() {
+        isDead = true;
+    }
+
 
 }

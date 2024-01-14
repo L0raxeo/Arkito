@@ -32,9 +32,7 @@ public class GuiButton extends GuiComponent
 
     @Override
     public void update()
-    {
-
-    }
+    {}
 
     @Override
     public void render(Graphics g)

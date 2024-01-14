@@ -29,8 +29,18 @@ public class GuiLayer
 
     public static void onMouseRelease()
     {
-        for (GuiComponent c : guiComponents)
-            if (c.hovering) c.onClick();
+        Iterator<GuiComponent> iterator = guiComponents.iterator();
+        while (iterator.hasNext()) {
+            GuiComponent guiComponent = iterator.next();
+
+            if (guiComponent.hovering) {
+                guiComponent.onClick();
+            }
+
+            if (guiComponent.isDead()) {
+                iterator.remove();
+            }
+        }
     }
 
     public static void render(Graphics g)
@@ -44,7 +54,8 @@ public class GuiLayer
      */
     public static void clear()
     {
-        guiComponents.clear();
+        for (GuiComponent guiComponent : guiComponents)
+            guiComponent.die();
     }
 
     public static void addGuiComponent(GuiComponent c)
