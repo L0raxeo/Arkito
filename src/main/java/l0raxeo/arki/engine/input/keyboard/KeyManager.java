@@ -18,6 +18,8 @@ public final class KeyManager implements KeyListener
      */
     private static final ArrayList<Key> allKeys = new ArrayList<>();
 
+    private static Key lastKeyPressed = null;
+
     /**
      * Updates all keys and their states.
      */
@@ -186,6 +188,10 @@ public final class KeyManager implements KeyListener
                 k.queueState(RELEASED);
             }
         }
+    }
+
+    public static Key getLastKeyPressed() {
+        return lastKeyPressed;
     }
 
 }
