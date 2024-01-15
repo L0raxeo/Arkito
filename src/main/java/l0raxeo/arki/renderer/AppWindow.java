@@ -183,7 +183,9 @@ public class AppWindow implements Runnable
         keyListener.update();
         SceneManager.getActiveScene().update(dt);
         AudioManager.update();
-        updateWindowSize();
+
+        if (IS_RESIZEABLE)
+            updateWindowSize();
     }
 
     private void render()
